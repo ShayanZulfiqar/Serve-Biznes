@@ -7,6 +7,9 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+h1, h4{
+    font-weight: 600;
+}
 .link{
   text-decoration: none;
   color: black;
@@ -35,16 +38,15 @@ h1, h4{
 .navbar-collapse .order-item .nav-item .nav-link a {
   color: yellow;
 }
-.navbar button {
+.navbar .navbar-text button {
   border-radius: 25px;
-  font-weight: 400;
+  font-weight: 700;
   border-color: white;
 }
 .navbar button:hover {
   background: rgb(80, 80, 235);
-  color: white;
   border-radius: 25px;
-  font-weight: 400;
+  font-weight: 700;
 }
 .navbar button a {
   text-decoration: none;
@@ -59,7 +61,7 @@ h1, h4{
 .container-main button:hover {
   background-color: rgb(80, 80, 235);
   color: white;
-  border-color: orange;
+  border-color: rgb(80, 80, 235);
 }
 .container-main .container-image {
   height: 500px;
@@ -901,5 +903,17 @@ h1 {
 @media screen and (max-width: 900px) {
   .content-wrapper {
     width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .container-services img{
+    width: 300px ;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .container-choice img{
+    width: 300px ;
+    margin-bottom: 10px;
   }
 }

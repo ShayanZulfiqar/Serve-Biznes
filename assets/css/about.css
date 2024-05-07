@@ -17,7 +17,6 @@
     height: 500px;
     width: auto;
     filter: brightness(100%);
-
 }
 .banner-section{
     background-image:  url("/assets/images/about.jpg");
@@ -33,19 +32,46 @@
     transition-delay: 5s;
 
 }
-
-.banner-section .text-container .button-section button{
+/* iejfdkjkjdsf */
+.banner-section .image-section .button-section .button1{
     background-color: rgb(80, 80, 235);
-    border-radius: 20px;
-    color: white; 
+    border: 3px solid rgb(196, 196, 196);
 }
-.banner-section .text-container .button-section button:hover{
-    background-color: blue;
+.banner-section .image-section .button-section .button2{
+    background-color: transparent;
+    border: 3px solid rgb(196, 196, 196);
+}
+.banner-section .image-section .button-section .button1:hover{
+    background-color: transparent;
+    border: 3px solid white;
 
-    border-radius: 20px;
-    color: white; 
+}
+.banner-section .image-section .button-section .button2:hover{
+    background-color: rgb(80, 80, 235);
+    border: 3px solid white;
+
+}
+/* aeflkdiadjfakwl */
+
+.banner-section .text-container .button-section .button1{
+    background-color: rgb(80, 80, 235);
+    border: 3px solid rgb(196, 196, 196);
 }
 
+.banner-section .text-container .button-section .button1:hover{
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+}
+.banner-section .text-container .button-section .button2{
+    background-color: transparent;
+    border: 3px solid rgb(196, 196, 196);
+}
+.banner-section .text-container .button-section .button2:hover{
+    background-color: rgb(80, 80, 235);
+    border: 3px solid white;
+    color: white;
+}
 .container-team .team .row .cards .card i{
     font-size: 18px;
 }
