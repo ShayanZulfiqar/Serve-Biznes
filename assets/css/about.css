@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  h1, h4{
+      font-weight: 600;
+  }
+.banner-section:hover{
+    background-image:
+     url("/assets/images/about.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    height: 500px;
+    width: auto;
+    filter: brightness(100%);
+
+}
+.banner-section{
+    background-image:  url("/assets/images/about.jpg");
+    background-color: rgba(0, 0, 0, 0.525);
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    height: 500px;
+    width: auto;
+    filter: grayscale(100%);
+    transition-delay: 5s;
+
+}
+
+.banner-section .text-container .button-section button{
+    background-color: rgb(80, 80, 235);
+    border-radius: 20px;
+    color: white; 
+}
+.banner-section .text-container .button-section button:hover{
+    background-color: blue;
+
+    border-radius: 20px;
+    color: white; 
+}
+
+.container-team .team .row .cards .card i{
+    font-size: 18px;
+}
+
+.hiring-section button{
+    border-radius: 20px;
+    border: 2px solid black;
+}
+.hiring-section button:hover{
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color:  rgb(80, 80, 235);
+    color: white;
+}
