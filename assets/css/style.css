@@ -1,15 +1,43 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');;
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Poppins";
 }
-h1, h4{
-    font-weight: 600;
+:root{
+  --font-family: "Poppins";
 }
+h1,h2,h3,h4,h5,h6{
+    font-weight: 600 !important;
+    font-family: var(--font-family);
+}
+.btn-dark:hover{
+  background: transparent !important;
+  border-color: black !important;
+  color: black !important;
+}
+.btn-outline-dark { 
+  border-radius: 25px;
+  /* font-weight: 400; */
+}
+
+.btn-outline-dark:hover {
+  background-color: #1e2330 !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+button, .btn{
+  transition: all .4s ease-in-out;
+  box-shadow: none;
+  font-size: 15px ;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
 .link{
   text-decoration: none;
   color: black;
@@ -26,14 +54,35 @@ h1, h4{
 .navbar {
   background: #1e2330;
 }
+.navbar .navbar-nav{
+  gap: 1rem;
+}
 .navbar-collapse ul li a {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
+  font-family: "Poppins";
+  position: relative;
+}
+.navbar-collapse ul li a::before{
+  content: "";
+  width: 20%;
+  overflow: hidden;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  /* transform: scale(0); */
+  opacity: 0;
+  transition: all .4s ease;
+}
+.navbar-collapse ul li a:hover::before{
+  width: 80%;
+  opacity: 1;
+  /* transform: scale(1); */
+  /* transform-origin: left; */
 }
 .navbar-collapse ul li a:hover {
-  font-size: 20px;
-  color: greenyellow;
-  font-weight: 500;
+  color: rgba(255, 255, 255, 0.813) !important;
 }
 .navbar-collapse .order-item .nav-item .nav-link a {
   color: yellow;
@@ -41,28 +90,23 @@ h1, h4{
 .navbar .navbar-text button {
   border-radius: 25px;
   font-weight: 700;
-  border-color: white;
+  border-color: transparent;
 }
 .navbar button:hover {
-  background: rgb(80, 80, 235);
-  border-radius: 25px;
+  background: transparent;
+  border-color: white;
   font-weight: 700;
+  color: white;
+}
+.navbar button:hover a{
+  color: white;
 }
 .navbar button a {
   text-decoration: none;
 }
 
-.container-main button {
-  background-color: transparent;
-  color: black;
-  border-radius: 25px;
-  font-weight: 500;
-}
-.container-main button:hover {
-  background-color: rgb(80, 80, 235);
-  color: white;
-  border-color: rgb(80, 80, 235);
-}
+
+
 .container-main .container-image {
   height: 500px;
   width: auto;
@@ -76,7 +120,7 @@ h1, h4{
   margin-right: 10px;
 }
 .container-services .section-buttons button:hover {
-  background-color: rgb(80, 80, 235);
+  background-color: #1e2330; color: white;
   border-radius: 25px;
   color: white;
   font-weight: 500;
@@ -101,7 +145,7 @@ h1, h4{
 }
 
 /* testimonial section */
-button,
+
 input,
 select {
   font-family: inherit;
@@ -608,7 +652,7 @@ h1 {
 
 .btn-primary:hover {
   color: white;
-  background-color: rgb(80, 80, 235);
+  background-color: #1e2330; color: white;
   box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
   transform: translateY(-3px);
 }
@@ -636,7 +680,7 @@ h1 {
 }
 .container-get-started .button1:hover {
   /* border-radius: 100px; */
-  background-color: rgb(80, 80, 235);
+  background-color: #1e2330; color: white;
   color: white;
 }
 .container-get-started .button2 {
@@ -644,7 +688,7 @@ h1 {
 }
 .container-get-started .button2:hover {
   border-radius: 25px;
-  background-color: rgb(80, 80, 235);
+  background-color: #1e2330; color: white;
   color: white;
 }
 .container-faqs {
@@ -856,10 +900,12 @@ h1 {
 
 .footer-col .icons i {
   color: #afb6c7;
+  transition: all .3s ease;
 }
 
 .footer-col .icons i:hover {
   color: #fff;
+  transform: rotate(180deg);
 }
 
 @media (max-width: 768px) {

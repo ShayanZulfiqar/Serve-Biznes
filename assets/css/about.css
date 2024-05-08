@@ -34,7 +34,7 @@
 }
 /* iejfdkjkjdsf */
 .banner-section .image-section .button-section .button1{
-    background-color: rgb(80, 80, 235);
+    background-color: #1e2330; color: white;
     border: 3px solid rgb(196, 196, 196);
 }
 .banner-section .image-section .button-section .button2{
@@ -47,35 +47,53 @@
 
 }
 .banner-section .image-section .button-section .button2:hover{
-    background-color: rgb(80, 80, 235);
+    background-color: #1e2330; color: white;
     border: 3px solid white;
 
 }
 /* aeflkdiadjfakwl */
 
 .banner-section .text-container .button-section .button1{
-    background-color: rgb(80, 80, 235);
-    border: 3px solid rgb(196, 196, 196);
+    background-color: #1e2330; color: white;
+    border-color: transparent;
 }
 
 .banner-section .text-container .button-section .button1:hover{
     background-color: transparent;
-    border: 3px solid white;
+    border-color: white !important;
     color: white;
 }
 .banner-section .text-container .button-section .button2{
+    color: white;
     background-color: transparent;
     border: 3px solid rgb(196, 196, 196);
 }
-.banner-section .text-container .button-section .button2:hover{
-    background-color: rgb(80, 80, 235);
-    border: 3px solid white;
-    color: white;
-}
+
 .container-team .team .row .cards .card i{
     font-size: 18px;
 }
-
+.cards .card .card-body .card-title{
+    font-size: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1; */
+}
+.cards .card .card-body .card-title:first-child{
+    color: #4b4b4c;
+    font-size: 13px;
+    text-transform:capitalize;
+}
+.cards .card .card-body .card-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
 .hiring-section button{
     border-radius: 20px;
     border: 2px solid black;
