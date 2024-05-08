@@ -160,18 +160,43 @@ window.addEventListener("resize", () => {
 });
 
 
-const items = document.querySelectorAll(".accordion button");
-
-function toggleAccordion() {
-  const itemToggle = this.getAttribute('aria-expanded');
+document.addEventListener("DOMContentLoaded", function() {
+	const items = document.querySelectorAll(".accordion button");
   
-  for (i = 0; i < items.length; i++) {
-    items[i].setAttribute('aria-expanded', 'false');
-  }
+	function toggleAccordion() {
+	  const itemToggle = this.getAttribute('aria-expanded');
+	  
+	  for (let i = 0; i < items.length; i++) {
+		items[i].setAttribute('aria-expanded', 'false');
+	  }
+	  
+	  if (itemToggle == 'false') {
+		this.setAttribute('aria-expanded', 'true');
+	  }
+	}
   
-  if (itemToggle == 'false') {
-    this.setAttribute('aria-expanded', 'true');
-  }
-}
+	items.forEach(item => item.addEventListener('click', toggleAccordion));
+  });
+  
 
-items.forEach(item => item.addEventListener('click', toggleAccordion));
+// faqs 
+if (location.href == 'https://customerpanel.assignmentdesk.co.uk/order-new') {
+      var locationField = "/order-new";
+    }
+    else {
+      var locationField = "/order";
+    }
+    // var locationField = window.location.hostname == "localhost" ? "/customer_panel/order" : "/order-new";
+    if (window.location.pathname.toLowerCase() == locationField) $('.chosen-select').chosen({ width: "200px" });
+    $(".sub_label").show();
+    $('.hide_li').show();
+    function sle_sub_name(d) {
+      var sub_name = $("#assignment_subject option:selected").text();
+      $("#assignment_subject_nm").val(sub_name);
+    }
+    function set_level() {
+      var level = $("#assignment_subject option:selected").data('level');
+      $("#lavel").val(level);
+    }
+    sle_sub_name($('#assignment_subject'));
+    ass_select('1', 'Pages | Words', '1 ', '250', '', '');

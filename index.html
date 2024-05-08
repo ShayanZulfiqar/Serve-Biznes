@@ -662,54 +662,6 @@
 
       </div>
     </div>
-    <!-- cards sections -->
-    <!-- <h1 class="text-center">Pick the best plan for you</h1> -->
-
-    <!-- <div class="pricing-box-container">
-      <div class="pricing-box text-center p-4">
-        <h5>Basic Plan</h5>
-        <p>Perfect for small projects</p>
-        <p class="price"><sup>$</sup>19<sub>/mo</sub></p>
-        <ul class="features-list">
-          <li><strong></strong> Expert writers available 24/7</li>
-          <li><strong></strong> Plagiarism-free and original content</li>
-          <li><strong></strong> Timely delivery of assignments</li>
-          <li class="text-white">
-            <strong></strong> Timely delivery of assignments
-          </li>
-          <li class="text-white">
-            <strong></strong> Timely delivery of assignments
-          </li>
-        </ul>
-        <button class="btn-primary">Get Started</button>
-      </div>
-
-      <div class="pricing-box text-center p-4">
-        <h5>Business Plan</h5>
-        <p>Ideal for larger projects</p>
-        <p class="price"><sup>$</sup>29<sub>/mo</sub></p>
-        <ul class="features-list">
-          <li><strong></strong> Dedicated account manager available</li>
-          <li><strong></strong> Access to premium resources</li>
-          <li><strong></strong> Priority customer support</li>
-          <li><strong></strong> Strict quality control measures</li>
-          <li><strong></strong> Customized writing solutions</li>
-        </ul>
-        <button class="btn-primary">Get Started</button>
-      </div>
-
-      <!-- <div class="pricing-box pricing-box-bg-image text-center p-4">
-          <h5>Premium</h5>
-          <p class="price"><sup>$</sup>39<sub>/mo</sub></p>
-          <ul class="features-list">
-            <li><strong>5</strong> Project</li>
-            <li><strong>20</strong> Team Members</li>
-            <li><strong>100</strong> Personal Projects</li>
-            <li><strong>15,000</strong> Messages</li>
-          </ul>
-          <button class="btn-primary">Get Started</button>
-        </div> -->
-    </div> -->
 
     <!-- get started today -->
     <div class="container-get-started overflow-hidden border-spacing-1 p-5">
@@ -858,11 +810,11 @@
           <li class="text-light">
             <h4><strong>Info</strong></h4>
           </li>
-          <li><a href="#">Serve Biznes</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="index.html">Serve Biznes</a></li>
+          <li><a href="about.html">About Us</a></li>
           <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Collection</a></li>
+          <li><a href="service.html">Service</a></li>
+          <!-- <li><a href="#">Collection</a></li> -->
         </ul>
       </div>
 
@@ -871,12 +823,12 @@
           <li class="text-light">
             <h4><strong>Info</strong></h4>
           </li>
-          <li><a href="#">Free Designs</a></li>
-          <li><a href="#">Latest Designs</a></li>
-          <li><a href="#">Themes</a></li>
-          <li><a href="#">Popular Designs</a></li>
-          <li><a href="#">Art Skills</a></li>
-          <li><a href="#">New Uploads</a></li>
+          <li><a href="Blogs.html">Blogs</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Samples</a></li>
+          <li><a href="#">Free Resources</a></li>
+          <!-- <li><a href="#">Art Skills</a></li> -->
+          <!-- <li><a href="#">New Uploads</a></li> -->
         </ul>
       </div>
 
@@ -902,29 +854,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="assets/javascript/home.js"></script>
-  <script type="text/javascript">
-    if (location.href == 'https://customerpanel.assignmentdesk.co.uk/order-new') {
-      var locationField = "/order-new";
-    }
-    else {
-      var locationField = "/order";
-    }
-    // var locationField = window.location.hostname == "localhost" ? "/customer_panel/order" : "/order-new";
-    if (window.location.pathname.toLowerCase() == locationField) $('.chosen-select').chosen({ width: "200px" });
-    $(".sub_label").show();
-    $('.hide_li').show();
-    function sle_sub_name(d) {
-      var sub_name = $("#assignment_subject option:selected").text();
-      $("#assignment_subject_nm").val(sub_name);
-    }
-    function set_level() {
-      var level = $("#assignment_subject option:selected").data('level');
-      $("#lavel").val(level);
-    }
-    sle_sub_name($('#assignment_subject'));
-    ass_select('1', 'Pages | Words', '1 ', '250', '', '');
-
-  </script>
+  
 </body>
 
 </html>
