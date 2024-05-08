@@ -27,7 +27,7 @@
     background-size: cover;
 }
 .banner-section .image-section .button-section .button1{
-    background-color: rgb(80, 80, 235);
+    background-color: #1e2330; color: white;
     border: 3px solid rgb(196, 196, 196);
 }
 .banner-section .image-section .button-section .button2{
@@ -40,7 +40,7 @@
 
 }
 .banner-section .image-section .button-section .button2:hover{
-    background-color: rgb(80, 80, 235);
+    background-color: #1e2330; color: white;
     border: 3px solid white;
 
 }
@@ -48,12 +48,12 @@
     font-size: 40px;
 }
 .services-section button:hover{
-    background-color: rgb(80, 80, 235);
+    background-color: #1e2330; color: white;
     color: white;
 }
 
 .info-section .button-section button:hover{
-    background-color: rgb(80, 80, 235);
+    background-color: #1e2330; color: white;
 color: white;
 
 }
