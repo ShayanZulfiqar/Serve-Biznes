@@ -10,7 +10,7 @@ h1, h4{
 
 
 .main-section .button-section .button1 {
-  background-color: rgb(80, 80, 235);
+  background-color: #1e2330; color: white;
   border: 3px solid rgb(209, 209, 209);
   color: white;
   font-weight: 700;
@@ -28,14 +28,14 @@ h1, h4{
   font-weight: 700;
 }
 .main-section .button-section .button2:hover {
-  background-color: rgb(80, 80, 235);
+  background-color: #1e2330; color: white;
   border: 3px solid rgb(209, 209, 209);
   color: whitesmoke;
   font-weight: 700;
 }
 /* container services  */
 .container-services .section-buttons button{
-    background-color: rgb(80, 80, 235);
+    background-color: #1e2330; color: white;
   border: 3px solid rgb(209, 209, 209);
   color: white;
   font-weight: 700;

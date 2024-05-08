@@ -1,516 +1,1826 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
 
-<style>
-     .side-bar {
-    width: 32%;
-    background: #fff;
-    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
-    border-radius: 3px;
-    padding: 15px 18px 0;
-    text-align: center;
-    position: relative;
-    margin-left: 20px;
-}
+    <script type="text/javascript" src="/templates/GAH/js/jquery-3.0.0.min.js?v=43.144"></script>
+  </head>
 
+  <style>
+    .side-bar {
+      width: 32%;
+      background: #fff;
+      -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      border-radius: 3px;
+      padding: 15px 18px 0;
+      text-align: center;
+      position: relative;
+      margin-left: 20px;
+    }
 
- .side-head {
-    font-size: 28px;
-    line-height: 34px;
-    font-family: robotomedium;
-    color: #434343
-}
+    .side-head {
+      font-size: 28px;
+      line-height: 34px;
+      font-family: robotomedium;
+      color: #434343;
+    }
 
- .side-subhead {
-    color: #616161;
-    font-size: 15px;
-    line-height: 18px;
-    margin: 0 0 15px
-}
+    .side-subhead {
+      color: #616161;
+      font-size: 15px;
+      line-height: 18px;
+      margin: 0 0 15px;
+    }
 
- .label-title {
-    display: block;
-    font-size: 15px;
-    line-height: 18px;
-    color: #707070;
-    padding: 25px 0 0
-}
+    .label-title {
+      display: block;
+      font-size: 15px;
+      line-height: 18px;
+      color: #707070;
+      padding: 25px 0 0;
+    }
 
- .box {
-    margin-bottom: 18px;
-    position: relative
-}
+    .box {
+      margin-bottom: 18px;
+      position: relative;
+    }
 
- .box select {
-    font-size: 14px;
-    line-height: 18px;
-    color: #2a2a2a;
-    border: 1px solid #d8d8d8;
-    padding: 12px 25px 12px 10px;
-    border-radius: 3px;
-    background: url(../images/down-arrow.svg) no-repeat center right 10px;
-    width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none
-}
+    .box select {
+      font-size: 14px;
+      line-height: 18px;
+      color: #2a2a2a;
+      border: 1px solid #d8d8d8;
+      padding: 12px 25px 12px 10px;
+      border-radius: 3px;
+      background: url(../images/down-arrow.svg) no-repeat center right 10px;
+      width: 100%;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
 
- .box.select-bx {
-    width: 48%;
-    display: inline-block;
-    margin: 0 10px 18px 0
-}
+    .box.select-bx {
+      width: 48%;
+      display: inline-block;
+      margin: 0 10px 18px 0;
+    }
 
- .box.select-bx.select-bx-last {
-    margin: 0 0 15px
-}
+    .box.select-bx.select-bx-last {
+      margin: 0 0 15px;
+    }
 
- .box.select-bx-second {
-    width: 100%
-}
+    .box.select-bx-second {
+      width: 100%;
+    }
 
- .box.online-exam {
-    width: 48%;
-    display: inline-block;
-    margin: 0 10px 18px 0
-}
+    .box.online-exam {
+      width: 48%;
+      display: inline-block;
+      margin: 0 10px 18px 0;
+    }
 
- .box .error {
-    position: absolute
-}
+    .box .error {
+      position: absolute;
+    }
 
- .box#urgency_drop.urgency_drop {
-    width: 100%
-}
+    .box#urgency_drop.urgency_drop {
+      width: 100%;
+    }
 
- .con_btn {
-    background: #f58e0e;
-    border-radius: 3px;
-    padding: 10px 0;
-    color: #fff;
-    font-family: robotomedium;
-    font-size: 20px;
-    line-height: 22px;
-    cursor: pointer;
-    width: 100%
-}
+    .con_btn {
+      background: #f58e0e;
+      border-radius: 3px;
+      padding: 10px 0;
+      color: #fff;
+      font-family: robotomedium;
+      font-size: 20px;
+      line-height: 22px;
+      cursor: pointer;
+      width: 100%;
+    }
 
- .con_btn:hover {
-    background: #e78e21
-}
+    .con_btn:hover {
+      background: #e78e21;
+    }
 
- .form-box {
-    min-height: 236px;
-    position: relative
-}
+    .form-box {
+      min-height: 236px;
+      position: relative;
+    }
 
- .form-box .form-loader {
-    position: absolute;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto
-}
+    .form-box .form-loader {
+      position: absolute;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
 
- .upload_file_box {
-    position: relative;
-    margin: 0 0 18px
-}
+    .upload_file_box {
+      position: relative;
+      margin: 0 0 18px;
+    }
 
- .upload_file_box .upload-btn, .upload_file_box input[type=file] {
-    border: 1px solid #d8d8d8;
-    border-radius: 3px;
-    color: #707070;
-    background-color: #fff;
-    padding: 10px 18px;
-    font-size: 14px;
-    line-height: 18px;
-    width: 100%;
-    height: 44px;
-    cursor: pointer
-}
+    .upload_file_box .upload-btn,
+    .upload_file_box input[type="file"] {
+      border: 1px solid #d8d8d8;
+      border-radius: 3px;
+      color: #707070;
+      background-color: #fff;
+      padding: 10px 18px;
+      font-size: 14px;
+      line-height: 18px;
+      width: 100%;
+      height: 44px;
+      cursor: pointer;
+    }
 
- .upload_file_box .upload-btn svg, .upload_file_box input[type=file] svg {
-    margin: 0 5px 0 0
-}
+    .upload_file_box .upload-btn svg,
+    .upload_file_box input[type="file"] svg {
+      margin: 0 5px 0 0;
+    }
 
- .upload_file_box input[type=file] {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0
-}
+    .upload_file_box input[type="file"] {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
 
- .upload_file_box .file-type-error {
-    position: absolute;
-    bottom: unset;
-    color: #ef1010;
-    font-size: 13px;
-    display: block;
-    text-align: left
-}
+    .upload_file_box .file-type-error {
+      position: absolute;
+      bottom: unset;
+      color: #ef1010;
+      font-size: 13px;
+      display: block;
+      text-align: left;
+    }
 
- .upload_file_result {
-    display: none;
-    width: 100%;
-    margin: 0
-}
+    .upload_file_result {
+      display: none;
+      width: 100%;
+      margin: 0;
+    }
 
- .upload_file_result .ul_list {
-    list-style: none;
-    margin: 0;
-    height: 35px;
-    overflow: auto
-}
+    .upload_file_result .ul_list {
+      list-style: none;
+      margin: 0;
+      height: 35px;
+      overflow: auto;
+    }
 
- .upload_file_result .ul_list li {
-    padding: 7px 30px 7px 10px;
-    font-size: 13px;
-    line-height: 20px;
-    color: #707070;
-    word-wrap: break-word;
-    white-space: nowrap;
-    display: inline-block;
-    width: 100%;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: left;
-    position: relative;
-    background: #fff;
-    border-bottom: 1px solid #f1f1f1;
-    margin: 0
-}
+    .upload_file_result .ul_list li {
+      padding: 7px 30px 7px 10px;
+      font-size: 13px;
+      line-height: 20px;
+      color: #707070;
+      word-wrap: break-word;
+      white-space: nowrap;
+      display: inline-block;
+      width: 100%;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+      position: relative;
+      background: #fff;
+      border-bottom: 1px solid #f1f1f1;
+      margin: 0;
+    }
 
- .upload_file_result .ul_list li .close-icon {
-    cursor: pointer;
-    background: url(../images/svg/cancel.svg) no-repeat;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    right: 10px;
-    top: 10px
-}
+    .upload_file_result .ul_list li .close-icon {
+      cursor: pointer;
+      background: url(../images/svg/cancel.svg) no-repeat;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
 
- .upload_file_result .ul_list li svg {
-    background: #fff;
-    position: absolute;
-    right: 30px;
-    top: 8px
-}
+    .upload_file_result .ul_list li svg {
+      background: #fff;
+      position: absolute;
+      right: 30px;
+      top: 8px;
+    }
 
- .amount-banner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 15px 0 10px;
-    border-top: 1px solid #ececec
-}
+    .amount-banner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 15px 0 10px;
+      border-top: 1px solid #ececec;
+    }
 
- .amount-banner .amnt-left {
-    font-size: 14px;
-    line-height: 16px;
-    color: #707070;
-    font-family: robotomedium
-}
+    .amount-banner .amnt-left {
+      font-size: 14px;
+      line-height: 16px;
+      color: #707070;
+      font-family: robotomedium;
+    }
 
- .amount-banner .amnt-left .off {
-    background: #2db261;
-    border-radius: 3px;
-    padding: 2px 6px;
-    color: #fff
-}
+    .amount-banner .amnt-left .off {
+      background: #2db261;
+      border-radius: 3px;
+      padding: 2px 6px;
+      color: #fff;
+    }
 
- .amount-banner .symbole {
-    color: #1d1d1d;
-    font-size: 20px;
-    line-height: 22px;
-    font-family: robotomedium;
-    margin: 0
-}
+    .amount-banner .symbole {
+      color: #1d1d1d;
+      font-size: 20px;
+      line-height: 22px;
+      font-family: robotomedium;
+      margin: 0;
+    }
 
- .amount-banner .symbole .value {
-    font-size: 20px;
-    line-height: 24px
-}
-</style>
-<body>
-    
+    .amount-banner .symbole .value {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  </style>
+  <body>
     <div class="side-bar">
-        <h1 class="side-head">Online Assignment Help</h1>
-        <p class="side-subhead">Buy Assignment Writing Help Online</p>
-        <form method="post" onsubmit="return bannerForm(this)" action="https://customerpanel.globalassignmenthelp.com/order" id="bannerform">
+      <h1 class="side-head">Online Assignment Help</h1>
+      <p class="side-subhead">Buy Assignment Writing Help Online</p>
+      <form
+        method="post"
+        onsubmit="return bannerForm(this)"
+        action="https://customerpanel.globalassignmenthelp.com/order"
+        id="bannerform"
+      >
         <div class="form-box">
-        <div class="loader" style="">
-        <div class="box select_services">
-        <label for="ass_group_list" style="left: -9999em; opacity: 0; position: absolute;">Enter Email</label>
-        <select id="ass_group_list" aria-label="assignment" name="group_id" onchange="get_subject_list(this, `https://www.globalassignmenthelp.com/`, ``)" data-type="blank" style="color: rgb(29, 29, 29);"><option unit_tag="Pages | Words" value="">Select Services</option><option unit_tag="Pages | Words" data-key="Assignment" value="1 " undefined="">Assignment</option><option unit_tag="Pages | Words" data-key="Coursework" value="1 " undefined="">Coursework</option><option unit_tag="Pages | Words" data-key="Homework" value="1 " undefined="">Homework</option><option unit_tag="Pages | Words" data-key="Term Paper" value="1 " undefined="">Term Paper</option><option unit_tag="Pages | Words" data-key="Research Paper" value="2 " undefined="">Research Paper</option><option unit_tag="Pages | Words" data-key="Research Proposal" value="2 " undefined="">Research Proposal</option><option unit_tag="Pages | Words" data-key="Personal Statement" value="1 " undefined="">Personal Statement</option><option unit_tag="Pages | Words" data-key="Case Study" value="14 " undefined="">Case Study</option><option unit_tag="Pages | Words" data-key="Report Writing" value="14 " undefined="">Report Writing</option><option unit_tag="Pages | Words" data-key="Dissertation" value="2 " undefined="">Dissertation</option><option unit_tag="Pages | Words" data-key="PHD Thesis" value="2 " undefined="">PHD Thesis</option><option unit_tag="Pages | Words" data-key="Dissertation Proposal" value="2 " undefined="">Dissertation Proposal</option><option unit_tag="Pages | Words" data-key="Editing | Proofreading" value="5 " undefined="">Editing | Proofreading</option><option unit_tag="Pages | Words" data-key="Paraphrasing" value="5 " undefined="">Paraphrasing</option><option unit_tag="Pages | Words" data-key="Business Plan" value="13 " undefined="">Business Plan</option><option unit_tag="Pages | Words" data-key="Essay" value="16 " undefined="">Essay</option><option unit_tag="Pages | Words" data-key="Resume / CV Services" value="11 " undefined="">Resume / CV Services</option><option unit_tag="Slides" data-key="PowerPoint Presentation" value="8 " undefined="">PowerPoint Presentation</option><option unit_tag="Pages | Words" data-key="Plagiarism Report" value="17 " undefined="">Plagiarism Report</option><option unit_tag="Poster" data-key="Poster" value="9 " undefined="">Poster</option><option unit_tag="Leaflet" data-key="Leaflet" value="10 " undefined="">Leaflet</option><option unit_tag="Que. | Word/Que." data-key="Online Exam | Question based test Papers" value="4 " undefined="">Online Exam | Question based test Papers</option><option unit_tag="Que. | Word/Que." data-key="Multiple Choice Questions" value="15 " undefined="">Multiple Choice Questions</option><option unit_tag="Pages | Words" data-key="Summary Writing" value="6 " undefined="">Summary Writing</option><option unit_tag="Pages | Words" data-key="Portfolio" value="7 " undefined="">Portfolio</option></select>
-        <div class="hd">
-        <input type="hidden" value="1" name="doctype_id" class="assignment" id="assignment">
-        <input type="hidden" value="Pages | Words" name="group_unit_hidden" id="group_unit_hidden" class="group_unit_hidden">
-        <input type="hidden" value="Homework" name="assignment_service" class="" id="assignment_service">
-        <input type="hidden" name="file_name_arr[]" value="" id="order_file">
-        <input type="hidden" name="filewords" value="" id="filewords">
-        <input id="words" name="words" type="hidden" value="1000">
-        <input type="hidden" id="units" name="units" value="Select 1 Page  / 250 Words  2 Pages   / 500 Words  3 Pages   / 750 Words  4 Pages   / 1000 Words  5 Pages   / 1250 Words  6 Pages   / 1500 Words  7 Pages   / 1750 Words  8 Pages   / 2000 Words  9 Pages   / 2250 Words  10 Pages   / 2500 Words  11 Pages   / 2750 Words  12 Pages   / 3000 Words  13 Pages   / 3250 Words  14 Pages   / 3500 Words  15 Pages   / 3750 Words  16 Pages   / 4000 Words  17 Pages   / 4250 Words  18 Pages   / 4500 Words  19 Pages   / 4750 Words  20 Pages   / 5000 Words  21 Pages   / 5250 Words  22 Pages   / 5500 Words  23 Pages   / 5750 Words  24 Pages   / 6000 Words  25 Pages   / 6250 Words  26 Pages   / 6500 Words  27 Pages   / 6750 Words  28 Pages   / 7000 Words  29 Pages   / 7250 Words  30 Pages   / 7500 Words  40 Pages   / 10000 Words  50 Pages   / 12500 Words  60 Pages   / 15000 Words  70 Pages   / 17500 Words  80 Pages   / 20000 Words  90 Pages   / 22500 Words  100 Pages   / 25000 Words  110 Pages   / 27500 Words  120 Pages   / 30000 Words  130 Pages   / 32500 Words  140 Pages   / 35000 Words  150 Pages   / 37500 Words  160 Pages   / 40000 Words  180 Pages   / 45000 Words  200 Pages   / 50000 Words  250 Pages   / 62500 Words ">
-        </div>
-        </div>
-        <div class="box subject_list" id="get_subject"><select id="assignment_subject" name="assignment_subject" aria-label="assignment_subject" class="chosen-select" onchange="ass_select(this.value, 'Pages | Words', '1 ', '250', '', '');sle_sub_name(this);set_level()" data-type="blank" style="color: rgb(29, 29, 29);">
-            <option value="">Select Subject</option>  
-            <optgroup label="Management">                        <option data-level="1" sub_id="93" data-addonprice="0" value="1">Economics (theory)</option>
-                                                            <option data-level="1" sub_id="44" data-addonprice="0" value="1">Leisure Management</option>
-                                                            <option data-level="1" sub_id="82" data-addonprice="0" value="1">Human Resource </option>
-                                                            <option data-level="1" sub_id="34" data-addonprice="0" value="1">Housing </option>
-                                                            <option data-level="1" sub_id="86" data-addonprice="0" value="1">Operations</option>
-                                                            <option data-level="1" sub_id="25" data-addonprice="0" value="1">Fashion </option>
-                                                            <option data-level="1" sub_id="24" data-addonprice="0" value="1">Estate Management</option>
-                                                            <option data-level="1" sub_id="35" data-addonprice="0" value="1">Human Resource Management</option>
-                                                            <option data-level="1" sub_id="90" data-addonprice="0" value="1">Reflective</option>
-                                                            <option data-level="1" sub_id="46" data-addonprice="0" value="1">Other Management</option>
-                                                            <option data-level="1" sub_id="47" data-addonprice="0" value="1">Marketing</option>
-                                                            <option data-level="1" sub_id="79" data-addonprice="0" value="1">Leadership</option>
-                                                            <option data-level="1" sub_id="78" data-addonprice="1000" value="1">Research Methodology</option>
-                                                            <option data-level="1" sub_id="10" data-addonprice="0" value="1">Communication</option>
-                                                            <option data-level="1" sub_id="36" data-addonprice="0" value="1">Human Rights</option>
-                                                            <option data-level="1" sub_id="39" data-addonprice="0" value="1">International Relations</option>
-                                                            <option data-level="1" sub_id="6" data-addonprice="0" value="1">Business</option>
-                                                            <option data-level="1" sub_id="40" data-addonprice="0" value="1">International Studies</option>
-                                                            <option data-level="1" sub_id="37" data-addonprice="0" value="2">Information Systems</option>
-                                                            <option data-level="1" sub_id="62" data-addonprice="2200" value="2">Project Management</option>
-                                                            <option data-level="1" sub_id="94" data-addonprice="3500" value="2">Economics (calculative)</option>
-                                                            <option data-level="1" sub_id="133" data-addonprice="0" value="3">Small Business Enterprise</option>
-                                     </optgroup><optgroup label="Finance">                        <option data-level="1" sub_id="72" data-addonprice="0" value="1">Statistics</option>
-                                                            <option data-level="1" sub_id="27" data-addonprice="1500" value="1">Financial Management</option>
-                                                            <option data-level="1" sub_id="87" data-addonprice="0" value="1">Accounts</option>
-                                                            <option data-level="1" sub_id="9" data-addonprice="0" value="1">Commerce </option>
-                                                            <option data-level="1" sub_id="98" data-addonprice="6500" value="2">Eviews</option>
-                                                            <option data-level="1" sub_id="97" data-addonprice="6500" value="2">SAS</option>
-                                                            <option data-level="1" sub_id="96" data-addonprice="6500" value="2">NVIVO</option>
-                                                            <option data-level="1" sub_id="95" data-addonprice="3500" value="2">SPSS</option>
-                                     </optgroup><optgroup label="Tourism">                        <option data-level="1" sub_id="84" data-addonprice="0" value="1">Travel &amp; Tourism</option>
-                                                            <option data-level="1" sub_id="80" data-addonprice="0" value="1">Food</option>
-                                                            <option data-level="1" sub_id="76" data-addonprice="0" value="1">Tourism</option>
-                                                            <option data-level="1" sub_id="81" data-addonprice="0" value="1">Hospitality</option>
-                                     </optgroup><optgroup label="Law">                        <option data-level="1" sub_id="43" data-addonprice="1000" value="1">Law</option>
-                                                            <option data-level="1" sub_id="131" data-addonprice="1000" value="1">Legal Aspects</option>
-                                                            <option data-level="1" sub_id="129" data-addonprice="1000" value="1">Legal</option>
-                                                            <option data-level="1" sub_id="130" data-addonprice="1000" value="1">Business Law</option>
-                                     </optgroup><optgroup label="Health ">                        <option data-level="1" sub_id="31" data-addonprice="0" value="1">Health </option>
-                                                            <option data-level="1" sub_id="85" data-addonprice="0" value="1">Healthcare</option>
-                                                            <option data-level="1" sub_id="32" data-addonprice="0" value="1">Health &amp; Social Care</option>
-                                                            <option data-level="1" sub_id="100" data-addonprice="1500" value="1">Pharmacy</option>
-                                                            <option data-level="1" sub_id="51" data-addonprice="0" value="1">Medical </option>
-                                                            <option data-level="1" sub_id="8" data-addonprice="0" value="1">Childcare </option>
-                                                            <option data-level="1" sub_id="54" data-addonprice="0" value="1">Nursing</option>
-                                                            <option data-level="1" sub_id="59" data-addonprice="2000" value="1">Physiology </option>
-                                                            <option data-level="1" sub_id="57" data-addonprice="0" value="1">Physical Education</option>
-                                                            <option data-level="1" sub_id="102" data-addonprice="2000" value="2">Biotechnology </option>
-                                                            <option data-level="1" sub_id="104" data-addonprice="10000" value="3">Lab-Report </option>
-                                     </optgroup><optgroup label="Arts &amp; Humanities">                        <option data-level="1" sub_id="67" data-addonprice="0" value="1">Social Policy</option>
-                                                            <option data-level="1" sub_id="68" data-addonprice="0" value="1">Social Work</option>
-                                                            <option data-level="1" sub_id="69" data-addonprice="0" value="1">Sociology </option>
-                                                            <option data-level="1" sub_id="71" data-addonprice="0" value="1">Sports</option>
-                                                            <option data-level="1" sub_id="52" data-addonprice="0" value="1">Military </option>
-                                                            <option data-level="1" sub_id="75" data-addonprice="0" value="1">Theology</option>
-                                                            <option data-level="1" sub_id="91" data-addonprice="0" value="1">Psychology</option>
-                                                            <option data-level="1" sub_id="63" data-addonprice="0" value="1">Property </option>
-                                                            <option data-level="1" sub_id="4" data-addonprice="0" value="1">Arts</option>
-                                                            <option data-level="1" sub_id="13" data-addonprice="0" value="1">Criminology </option>
-                                                            <option data-level="1" sub_id="23" data-addonprice="0" value="1">Environmental Studies</option>
-                                                            <option data-level="1" sub_id="28" data-addonprice="0" value="1">General Studies</option>
-                                                            <option data-level="1" sub_id="29" data-addonprice="0" value="1">Geography </option>
-                                                            <option data-level="1" sub_id="33" data-addonprice="0" value="1">History </option>
-                                                            <option data-level="1" sub_id="2" data-addonprice="0" value="1">Anthropology </option>
-                                                            <option data-level="1" sub_id="65" data-addonprice="0" value="1">Religion </option>
-                                                            <option data-level="1" sub_id="60" data-addonprice="0" value="1">Politics </option>
-                                                            <option data-level="1" sub_id="55" data-addonprice="0" value="1">Philosophy </option>
-                                                            <option data-level="1" sub_id="103" data-addonprice="2000" value="3">Geology </option>
-                                     </optgroup><optgroup label="Education">                        <option data-level="1" sub_id="77" data-addonprice="0" value="1">Translation</option>
-                                                            <option data-level="1" sub_id="18" data-addonprice="0" value="1">Education</option>
-                                                            <option data-level="1" sub_id="73" data-addonprice="0" value="1">Teaching</option>
-                                     </optgroup><optgroup label="Languages ">                        <option data-level="1" sub_id="45" data-addonprice="0" value="1">Linguistics </option>
-                                                            <option data-level="1" sub_id="22" data-addonprice="1500" value="1">English Literature</option>
-                                                            <option data-level="1" sub_id="21" data-addonprice="0" value="1">English Language</option>
-                                                            <option data-level="1" sub_id="30" data-addonprice="2500" value="2">German </option>
-                                                            <option data-level="1" sub_id="42" data-addonprice="0" value="2">Languages </option>
-                                                            <option data-level="1" sub_id="61" data-addonprice="2500" value="2">Portuguese </option>
-                                                            <option data-level="1" sub_id="70" data-addonprice="2500" value="2">Spanish </option>
-                                     </optgroup><optgroup label="Culture &amp; Drama">                        <option data-level="1" sub_id="74" data-addonprice="0" value="1">Theatre</option>
-                                                            <option data-level="1" sub_id="41" data-addonprice="0" value="1">Journalism </option>
-                                                            <option data-level="1" sub_id="26" data-addonprice="0" value="1">Film Studies</option>
-                                                            <option data-level="1" sub_id="56" data-addonprice="0" value="1">Photography </option>
-                                                            <option data-level="1" sub_id="92" data-addonprice="0" value="1">Film Review</option>
-                                                            <option data-level="1" sub_id="16" data-addonprice="0" value="1">Drama </option>
-                                                            <option data-level="1" sub_id="14" data-addonprice="0" value="1">Cultural Studies</option>
-                                                            <option data-level="1" sub_id="50" data-addonprice="0" value="1">Media </option>
-                                                            <option data-level="1" sub_id="53" data-addonprice="0" value="1">Music </option>
-                                     </optgroup><optgroup label="Science">                        <option data-level="1" sub_id="49" data-addonprice="7500" value="1">Mechanics </option>
-                                                            <option data-level="1" sub_id="7" data-addonprice="6500" value="2">Chemistry </option>
-                                                            <option data-level="1" sub_id="66" data-addonprice="6500" value="2">Other Science</option>
-                                                            <option data-level="1" sub_id="58" data-addonprice="6500" value="2">Physics </option>
-                                                            <option data-level="1" sub_id="48" data-addonprice="6500" value="2">Mathematics </option>
-                                                            <option data-level="1" sub_id="38" data-addonprice="6500" value="2">Information Technology</option>
-                                                            <option data-level="1" sub_id="11" data-addonprice="6500" value="2">Computer Science</option>
-                                                            <option data-level="1" sub_id="5" data-addonprice="6500" value="2">Biology </option>
-                                                            <option data-level="1" sub_id="3" data-addonprice="7500" value="3">Architecture </option>
-                                                            <option data-level="1" sub_id="12" data-addonprice="7500" value="3">Construction </option>
-                                     </optgroup><optgroup label="Programming ">                        <option data-level="1" sub_id="105" data-addonprice="12000" value="2">IT-Networking </option>
-                                                            <option data-level="1" sub_id="112" data-addonprice="12000" value="2">Operating System </option>
-                                                            <option data-level="1" sub_id="121" data-addonprice="12000" value="2">Data Mining</option>
-                                                            <option data-level="1" sub_id="113" data-addonprice="12000" value="3">MATLAB </option>
-                                                            <option data-level="1" sub_id="111" data-addonprice="12000" value="3">Linux </option>
-                                                            <option data-level="1" sub_id="110" data-addonprice="12000" value="3">Python </option>
-                                                            <option data-level="1" sub_id="109" data-addonprice="12000" value="3">Other Programming </option>
-                                                            <option data-level="1" sub_id="108" data-addonprice="12000" value="3">iOS Application</option>
-                                                            <option data-level="1" sub_id="107" data-addonprice="12000" value="3">Android Application</option>
-                                                            <option data-level="1" sub_id="106" data-addonprice="12000" value="3">Web Application</option>
-                                                            <option data-level="1" sub_id="122" data-addonprice="12000" value="3">Simulation</option>
-                                                            <option data-level="1" sub_id="123" data-addonprice="12000" value="3">Data Visualization</option>
-                                                            <option data-level="1" sub_id="124" data-addonprice="12000" value="3">Data Modeling</option>
-                                                            <option data-level="1" sub_id="132" data-addonprice="10000" value="3">Database / SQL</option>
-                                                            <option data-level="1" sub_id="1" data-addonprice="12000" value="3">Animation </option>
-                                     </optgroup><optgroup label="Engineering ">                        <option data-level="1" sub_id="115" data-addonprice="10000" value="3">Mechanical Engineering</option>
-                                                            <option data-level="1" sub_id="120" data-addonprice="10000" value="3">Oil&amp;Gas Engineering</option>
-                                                            <option data-level="1" sub_id="119" data-addonprice="10000" value="3">IT/ Software Engineering</option>
-                                                            <option data-level="1" sub_id="118" data-addonprice="10000" value="3">Electical Engineering</option>
-                                                            <option data-level="1" sub_id="117" data-addonprice="10000" value="3">Electronics Engineering</option>
-                                                            <option data-level="1" sub_id="116" data-addonprice="10000" value="3">Chemical Engineering</option>
-                                                            <option data-level="1" sub_id="19" data-addonprice="10000" value="3">Other Engineering </option>
-                                                            <option data-level="1" sub_id="114" data-addonprice="10000" value="3">Civil Engineering</option>
-                                     </optgroup></select>
-        
-        <input type="hidden" id="assignment_subject_nm" name="assignment_subject_nm" readonly="" value="Marketing">
-        <script type="text/javascript">
-            if(location.href == 'https://customerpanel.assignmentdesk.co.uk/order-new'){
-                var locationField = "/order-new";
-            }
-            else{
-                var locationField = "/order";
-            }
-           // var locationField = window.location.hostname == "localhost" ? "/customer_panel/order" : "/order-new";
-            if(window.location.pathname.toLowerCase() == locationField) $('.chosen-select').chosen({width:"200px"});
-            $(".sub_label").show();
-            $('.hide_li').show();
-            function sle_sub_name(d)  {
-                var sub_name = $("#assignment_subject option:selected").text();
-                $("#assignment_subject_nm").val(sub_name);
-            }
-            function set_level() {
-                var level = $("#assignment_subject option:selected").data('level');
-                $("#lavel").val(level);
-            }
-            sle_sub_name($('#assignment_subject'));
-            ass_select('1', 'Pages | Words', '1 ', '250', '', '');
-            
-        </script>
-        </div>
-        <span class="select-box" id="q_w_calcu" style="display:none">
-        <div class="box select-bx select-bx-half select-bx-last questions_online_exam">
-        <select id="no_of_q" aria-label="no_of_q">
-        <option selected="" value="1">1 Questions</option>
-        </select>
-        </div>
-        <div class="box select-bx select-bx-half questions_words">
-        <select id="no_of_w" aria-label="no_of_w">
-        <option selected="" value="50">50 Words/Question</option>
-        </select>
-        </div>
-        </span>
-        <div class="box select-bx select-bx-half page_words" id="pages_count_parent">
-        <select id="pages_count" name="pages" onchange="price_calculater_order()" aria-label="pages" style="color: rgb(29, 29, 29);"><option value="" disabled="">Select</option><option value="1" selected=""> 1 Page  / 250 Words </option><option value="2"> 2 Pages   / 500 Words </option><option value="3"> 3 Pages   / 750 Words </option><option value="4"> 4 Pages   / 1000 Words </option><option value="5"> 5 Pages   / 1250 Words </option><option value="6"> 6 Pages   / 1500 Words </option><option value="7"> 7 Pages   / 1750 Words </option><option value="8"> 8 Pages   / 2000 Words </option><option value="9"> 9 Pages   / 2250 Words </option><option value="10"> 10 Pages   / 2500 Words </option><option value="11"> 11 Pages   / 2750 Words </option><option value="12"> 12 Pages   / 3000 Words </option><option value="13"> 13 Pages   / 3250 Words </option><option value="14"> 14 Pages   / 3500 Words </option><option value="15"> 15 Pages   / 3750 Words </option><option value="16"> 16 Pages   / 4000 Words </option><option value="17"> 17 Pages   / 4250 Words </option><option value="18"> 18 Pages   / 4500 Words </option><option value="19"> 19 Pages   / 4750 Words </option><option value="20"> 20 Pages   / 5000 Words </option><option value="21"> 21 Pages   / 5250 Words </option><option value="22"> 22 Pages   / 5500 Words </option><option value="23"> 23 Pages   / 5750 Words </option><option value="24"> 24 Pages   / 6000 Words </option><option value="25"> 25 Pages   / 6250 Words </option><option value="26"> 26 Pages   / 6500 Words </option><option value="27"> 27 Pages   / 6750 Words </option><option value="28"> 28 Pages   / 7000 Words </option><option value="29"> 29 Pages   / 7250 Words </option><option value="30"> 30 Pages   / 7500 Words </option><option value="40"> 40 Pages   / 10000 Words </option><option value="50"> 50 Pages   / 12500 Words </option><option value="60"> 60 Pages   / 15000 Words </option><option value="70"> 70 Pages   / 17500 Words </option><option value="80"> 80 Pages   / 20000 Words </option><option value="90"> 90 Pages   / 22500 Words </option><option value="100"> 100 Pages   / 25000 Words </option><option value="110"> 110 Pages   / 27500 Words </option><option value="120"> 120 Pages   / 30000 Words </option><option value="130"> 130 Pages   / 32500 Words </option><option value="140"> 140 Pages   / 35000 Words </option><option value="150"> 150 Pages   / 37500 Words </option><option value="160"> 160 Pages   / 40000 Words </option><option value="180"> 180 Pages   / 45000 Words </option><option value="200"> 200 Pages   / 50000 Words </option><option value="250"> 250 Pages   / 62500 Words </option></select>
-        </div>
-        <div class="box select-bx select-bx-half select-bx-last" id="urgency_drop">
-        <select id="urgency" name="urgency" onchange="price_calculater_order()" aria-label="urgency" style="color: rgb(29, 29, 29);"><option value="" disabled="">-- Select Urgency --</option>
-        
-                <option value="60h"> 4 hours </option>
-                
-                <option value="61h"> 8 hours </option>
-                
-                <option value="62h"> 16 hours </option>
-                
-                <option value="19"> 1 Day </option>
-                
-                <option value="18"> 2 Days </option>
-                
-                <option value="1"> 3 Days </option>
-                
-                <option value="2"> 4 Days </option>
-                
-                <option value="3"> 5 Days </option>
-                
-                <option value="22"> 6 Days </option>
-                
-                <option value="23"> 7 Days </option>
-                
-                <option value="24"> 8 Days </option>
-                
-                <option value="25"> 9 Days </option>
-                
-                <option value="4"> 10 Days </option>
-                
-                <option value="5"> 15 Days </option>
-                
-                <option value="6"> 20 Days </option>
-                
-                <option value="7"> 25 Days </option>
-                
-                <option selected="" value="8"> 30 Days </option>
+          <div class="loader" style="">
+            <div class="box select_services">
+              <label
+                for="ass_group_list"
+                style="left: -9999em; opacity: 0; position: absolute"
+                >Enter Email</label
+              >
+              <select
+                id="ass_group_list"
+                aria-label="assignment"
+                name="group_id"
+                onchange="get_subject_list(this, `https://www.globalassignmenthelp.com/`, ``)"
+                data-type="blank"
+                style="color: rgb(29, 29, 29)"
+              >
+                <option unit_tag="Pages | Words" value="">
+                  Select Services
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Assignment"
+                  value="1 "
+                  undefined=""
+                >
+                  Assignment
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Coursework"
+                  value="1 "
+                  undefined=""
+                >
+                  Coursework
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Homework"
+                  value="1 "
+                  undefined=""
+                >
+                  Homework
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Term Paper"
+                  value="1 "
+                  undefined=""
+                >
+                  Term Paper
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Research Paper"
+                  value="2 "
+                  undefined=""
+                >
+                  Research Paper
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Research Proposal"
+                  value="2 "
+                  undefined=""
+                >
+                  Research Proposal
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Personal Statement"
+                  value="1 "
+                  undefined=""
+                >
+                  Personal Statement
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Case Study"
+                  value="14 "
+                  undefined=""
+                >
+                  Case Study
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Report Writing"
+                  value="14 "
+                  undefined=""
+                >
+                  Report Writing
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Dissertation"
+                  value="2 "
+                  undefined=""
+                >
+                  Dissertation
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="PHD Thesis"
+                  value="2 "
+                  undefined=""
+                >
+                  PHD Thesis
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Dissertation Proposal"
+                  value="2 "
+                  undefined=""
+                >
+                  Dissertation Proposal
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Editing | Proofreading"
+                  value="5 "
+                  undefined=""
+                >
+                  Editing | Proofreading
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Paraphrasing"
+                  value="5 "
+                  undefined=""
+                >
+                  Paraphrasing
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Business Plan"
+                  value="13 "
+                  undefined=""
+                >
+                  Business Plan
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Essay"
+                  value="16 "
+                  undefined=""
+                >
+                  Essay
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Resume / CV Services"
+                  value="11 "
+                  undefined=""
+                >
+                  Resume / CV Services
+                </option>
+                <option
+                  unit_tag="Slides"
+                  data-key="PowerPoint Presentation"
+                  value="8 "
+                  undefined=""
+                >
+                  PowerPoint Presentation
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Plagiarism Report"
+                  value="17 "
+                  undefined=""
+                >
+                  Plagiarism Report
+                </option>
+                <option
+                  unit_tag="Poster"
+                  data-key="Poster"
+                  value="9 "
+                  undefined=""
+                >
+                  Poster
+                </option>
+                <option
+                  unit_tag="Leaflet"
+                  data-key="Leaflet"
+                  value="10 "
+                  undefined=""
+                >
+                  Leaflet
+                </option>
+                <option
+                  unit_tag="Que. | Word/Que."
+                  data-key="Online Exam | Question based test Papers"
+                  value="4 "
+                  undefined=""
+                >
+                  Online Exam | Question based test Papers
+                </option>
+                <option
+                  unit_tag="Que. | Word/Que."
+                  data-key="Multiple Choice Questions"
+                  value="15 "
+                  undefined=""
+                >
+                  Multiple Choice Questions
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Summary Writing"
+                  value="6 "
+                  undefined=""
+                >
+                  Summary Writing
+                </option>
+                <option
+                  unit_tag="Pages | Words"
+                  data-key="Portfolio"
+                  value="7 "
+                  undefined=""
+                >
+                  Portfolio
+                </option>
+              </select>
+              <div class="hd">
+                <input
+                  type="hidden"
+                  value="1"
+                  name="doctype_id"
+                  class="assignment"
+                  id="assignment"
+                />
+                <input
+                  type="hidden"
+                  value="Pages | Words"
+                  name="group_unit_hidden"
+                  id="group_unit_hidden"
+                  class="group_unit_hidden"
+                />
+                <input
+                  type="hidden"
+                  value="Assignment"
+                  name="assignment_service"
+                  class=""
+                  id="assignment_service"
+                />
+                <input
+                  type="hidden"
+                  name="file_name_arr[]"
+                  value=""
+                  id="order_file"
+                />
+                <input type="hidden" name="filewords" value="" id="filewords" />
+                <input id="words" name="words" type="hidden" value="250" />
+                <input
+                  type="hidden"
+                  id="units"
+                  name="units"
+                  value="Select 1 Page  / 250 Words  2 Pages   / 500 Words  3 Pages   / 750 Words  4 Pages   / 1000 Words  5 Pages   / 1250 Words  6 Pages   / 1500 Words  7 Pages   / 1750 Words  8 Pages   / 2000 Words  9 Pages   / 2250 Words  10 Pages   / 2500 Words  11 Pages   / 2750 Words  12 Pages   / 3000 Words  13 Pages   / 3250 Words  14 Pages   / 3500 Words  15 Pages   / 3750 Words  16 Pages   / 4000 Words  17 Pages   / 4250 Words  18 Pages   / 4500 Words  19 Pages   / 4750 Words  20 Pages   / 5000 Words  21 Pages   / 5250 Words  22 Pages   / 5500 Words  23 Pages   / 5750 Words  24 Pages   / 6000 Words  25 Pages   / 6250 Words  26 Pages   / 6500 Words  27 Pages   / 6750 Words  28 Pages   / 7000 Words  29 Pages   / 7250 Words  30 Pages   / 7500 Words  40 Pages   / 10000 Words  50 Pages   / 12500 Words  60 Pages   / 15000 Words  70 Pages   / 17500 Words  80 Pages   / 20000 Words  90 Pages   / 22500 Words  100 Pages   / 25000 Words  110 Pages   / 27500 Words  120 Pages   / 30000 Words  130 Pages   / 32500 Words  140 Pages   / 35000 Words  150 Pages   / 37500 Words  160 Pages   / 40000 Words  180 Pages   / 45000 Words  200 Pages   / 50000 Words  250 Pages   / 62500 Words "
+                />
+              </div>
+            </div>
+            <div class="box subject_list" id="get_subject">
+              <select
+                id="assignment_subject"
+                name="assignment_subject"
+                aria-label="assignment_subject"
+                class="chosen-select"
+                onchange="ass_select(this.value, 'Pages | Words', '1 ', '250', '', '');sle_sub_name(this);set_level()"
+                data-type="blank"
+                style="color: rgb(29, 29, 29)"
+              >
+                <option value="">Select Subject</option>
+                <optgroup label="Management">
+                  <option
+                    data-level="1"
+                    sub_id="93"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Economics (theory)
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="44"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Leisure Management
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="82"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Human Resource
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="34"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Housing
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="86"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Operations
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="25"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Fashion
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="24"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Estate Management
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="35"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Human Resource Management
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="90"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Reflective
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="46"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Other Management
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="47"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Marketing
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="79"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Leadership
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="78"
+                    data-addonprice="1000"
+                    value="1"
+                  >
+                    Research Methodology
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="10"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Communication
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="36"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Human Rights
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="39"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    International Relations
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="6"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Business
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="40"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    International Studies
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="37"
+                    data-addonprice="0"
+                    value="2"
+                  >
+                    Information Systems
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="62"
+                    data-addonprice="2200"
+                    value="2"
+                  >
+                    Project Management
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="94"
+                    data-addonprice="3500"
+                    value="2"
+                  >
+                    Economics (calculative)
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="133"
+                    data-addonprice="0"
+                    value="3"
+                  >
+                    Small Business Enterprise
+                  </option>
+                </optgroup>
+                <optgroup label="Finance">
+                  <option
+                    data-level="1"
+                    sub_id="72"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Statistics
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="27"
+                    data-addonprice="1500"
+                    value="1"
+                  >
+                    Financial Management
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="87"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Accounts
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="9"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Commerce
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="98"
+                    data-addonprice="6500"
+                    value="2"
+                  >
+                    Eviews
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="97"
+                    data-addonprice="6500"
+                    value="2"
+                  >
+                    SAS
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="96"
+                    data-addonprice="6500"
+                    value="2"
+                  >
+                    NVIVO
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="95"
+                    data-addonprice="3500"
+                    value="2"
+                  >
+                    SPSS
+                  </option>
+                </optgroup>
+                <optgroup label="Tourism">
+                  <option
+                    data-level="1"
+                    sub_id="84"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Travel &amp; Tourism
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="80"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Food
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="76"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Tourism
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="81"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Hospitality
+                  </option>
+                </optgroup>
+                <optgroup label="Law">
+                  <option
+                    data-level="1"
+                    sub_id="43"
+                    data-addonprice="1000"
+                    value="1"
+                  >
+                    Law
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="131"
+                    data-addonprice="1000"
+                    value="1"
+                  >
+                    Legal Aspects
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="129"
+                    data-addonprice="1000"
+                    value="1"
+                  >
+                    Legal
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="130"
+                    data-addonprice="1000"
+                    value="1"
+                  >
+                    Business Law
+                  </option>
+                </optgroup>
+                <optgroup label="Health ">
+                  <option
+                    data-level="1"
+                    sub_id="31"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Health
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="85"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Healthcare
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="32"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Health &amp; Social Care
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="100"
+                    data-addonprice="1500"
+                    value="1"
+                  >
+                    Pharmacy
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="51"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Medical
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="8"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Childcare
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="54"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Nursing
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="59"
+                    data-addonprice="2000"
+                    value="1"
+                  >
+                    Physiology
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="57"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Physical Education
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="102"
+                    data-addonprice="2000"
+                    value="2"
+                  >
+                    Biotechnology
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="104"
+                    data-addonprice="10000"
+                    value="3"
+                  >
+                    Lab-Report
+                  </option>
+                </optgroup>
+                <optgroup label="Arts &amp; Humanities">
+                  <option
+                    data-level="1"
+                    sub_id="67"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Social Policy
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="68"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Social Work
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="69"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Sociology
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="71"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Sports
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="52"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Military
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="75"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Theology
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="91"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Psychology
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="63"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Property
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="4"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Arts
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="13"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Criminology
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="23"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Environmental Studies
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="28"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    General Studies
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="29"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Geography
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="33"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    History
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="2"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Anthropology
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="65"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Religion
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="60"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Politics
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="55"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Philosophy
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="103"
+                    data-addonprice="2000"
+                    value="3"
+                  >
+                    Geology
+                  </option>
+                </optgroup>
+                <optgroup label="Education">
+                  <option
+                    data-level="1"
+                    sub_id="77"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Translation
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="18"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Education
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="73"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Teaching
+                  </option>
+                </optgroup>
+                <optgroup label="Languages ">
+                  <option
+                    data-level="1"
+                    sub_id="45"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Linguistics
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="22"
+                    data-addonprice="1500"
+                    value="1"
+                  >
+                    English Literature
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="21"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    English Language
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="30"
+                    data-addonprice="2500"
+                    value="2"
+                  >
+                    German
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="42"
+                    data-addonprice="0"
+                    value="2"
+                  >
+                    Languages
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="61"
+                    data-addonprice="2500"
+                    value="2"
+                  >
+                    Portuguese
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="70"
+                    data-addonprice="2500"
+                    value="2"
+                  >
+                    Spanish
+                  </option>
+                </optgroup>
+                <optgroup label="Culture &amp; Drama">
+                  <option
+                    data-level="1"
+                    sub_id="74"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Theatre
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="41"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Journalism
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="26"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Film Studies
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="56"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Photography
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="92"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Film Review
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="16"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Drama
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="14"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Cultural Studies
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="50"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Media
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="53"
+                    data-addonprice="0"
+                    value="1"
+                  >
+                    Music
+                  </option>
+                </optgroup>
+                <optgroup label="Science">
+                  <option
+                    data-level="1"
+                    sub_id="49"
+                    data-addonprice="7500"
+                    value="1"
+                  >
+                    Mechanics
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="7"
+                    data-addonprice="6500"
+                    value="2"
+                  >
+                    Chemistry
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="66"
+                    data-addonprice="6500"
+                    value="2"
+                  >
+                    Other Science
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="58"
+                    data-addonprice="6500"
+                    value="2"
+                  >
+                    Physics
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="48"
+                    data-addonprice="6500"
+                    value="2"
+                  >
+                    Mathematics
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="38"
+                    data-addonprice="6500"
+                    value="2"
+                  >
+                    Information Technology
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="11"
+                    data-addonprice="6500"
+                    value="2"
+                  >
+                    Computer Science
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="5"
+                    data-addonprice="6500"
+                    value="2"
+                  >
+                    Biology
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="3"
+                    data-addonprice="7500"
+                    value="3"
+                  >
+                    Architecture
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="12"
+                    data-addonprice="7500"
+                    value="3"
+                  >
+                    Construction
+                  </option>
+                </optgroup>
+                <optgroup label="Programming ">
+                  <option
+                    data-level="1"
+                    sub_id="105"
+                    data-addonprice="12000"
+                    value="2"
+                  >
+                    IT-Networking
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="112"
+                    data-addonprice="12000"
+                    value="2"
+                  >
+                    Operating System
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="121"
+                    data-addonprice="12000"
+                    value="2"
+                  >
+                    Data Mining
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="113"
+                    data-addonprice="12000"
+                    value="3"
+                  >
+                    MATLAB
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="111"
+                    data-addonprice="12000"
+                    value="3"
+                  >
+                    Linux
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="110"
+                    data-addonprice="12000"
+                    value="3"
+                  >
+                    Python
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="109"
+                    data-addonprice="12000"
+                    value="3"
+                  >
+                    Other Programming
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="108"
+                    data-addonprice="12000"
+                    value="3"
+                  >
+                    iOS Application
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="107"
+                    data-addonprice="12000"
+                    value="3"
+                  >
+                    Android Application
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="106"
+                    data-addonprice="12000"
+                    value="3"
+                  >
+                    Web Application
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="122"
+                    data-addonprice="12000"
+                    value="3"
+                  >
+                    Simulation
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="123"
+                    data-addonprice="12000"
+                    value="3"
+                  >
+                    Data Visualization
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="124"
+                    data-addonprice="12000"
+                    value="3"
+                  >
+                    Data Modeling
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="132"
+                    data-addonprice="10000"
+                    value="3"
+                  >
+                    Database / SQL
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="1"
+                    data-addonprice="12000"
+                    value="3"
+                  >
+                    Animation
+                  </option>
+                </optgroup>
+                <optgroup label="Engineering ">
+                  <option
+                    data-level="1"
+                    sub_id="115"
+                    data-addonprice="10000"
+                    value="3"
+                  >
+                    Mechanical Engineering
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="120"
+                    data-addonprice="10000"
+                    value="3"
+                  >
+                    Oil&amp;Gas Engineering
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="119"
+                    data-addonprice="10000"
+                    value="3"
+                  >
+                    IT/ Software Engineering
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="118"
+                    data-addonprice="10000"
+                    value="3"
+                  >
+                    Electical Engineering
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="117"
+                    data-addonprice="10000"
+                    value="3"
+                  >
+                    Electronics Engineering
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="116"
+                    data-addonprice="10000"
+                    value="3"
+                  >
+                    Chemical Engineering
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="19"
+                    data-addonprice="10000"
+                    value="3"
+                  >
+                    Other Engineering
+                  </option>
+                  <option
+                    data-level="1"
+                    sub_id="114"
+                    data-addonprice="10000"
+                    value="3"
+                  >
+                    Civil Engineering
+                  </option>
+                </optgroup>
+              </select>
+
+              <input
+                type="hidden"
+                id="assignment_subject_nm"
+                name="assignment_subject_nm"
+                readonly=""
+                value="Select Subject"
+              />
+              <script type="text/javascript">
+                if (
+                  location.href ==
+                  "https://customerpanel.assignmentdesk.co.uk/order-new"
+                ) {
+                  var locationField = "/order-new";
+                } else {
+                  var locationField = "/order";
+                }
+                // var locationField = window.location.hostname == "localhost" ? "/customer_panel/order" : "/order-new";
+                if (window.location.pathname.toLowerCase() == locationField)
+                  $(".chosen-select").chosen({ width: "200px" });
+                $(".sub_label").show();
+                $(".hide_li").show();
+                function sle_sub_name(d) {
+                  var sub_name = $(
+                    "#assignment_subject option:selected"
+                  ).text();
+                  $("#assignment_subject_nm").val(sub_name);
+                }
+                function set_level() {
+                  var level = $("#assignment_subject option:selected").data(
+                    "level"
+                  );
+                  $("#lavel").val(level);
+                }
+                sle_sub_name($("#assignment_subject"));
+                ass_select("1", "Pages | Words", "1 ", "250", "", "");
+              </script>
+            </div>
+            <span class="select-box" id="q_w_calcu" style="display: none">
+              <div
+                class="box select-bx select-bx-half select-bx-last questions_online_exam"
+              >
+                <select id="no_of_q" aria-label="no_of_q">
+                  <option selected="" value="1">1 Questions</option>
                 </select>
-        </div>
-        <div class="upload_file_box" style="display:none;">
-        <button class="upload-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="10.506" height="13.188" viewBox="0 0 12.506 15.188">
-        <g transform="translate(-46.367)">
-        <path d="M49.942,11.614H55.3V6.253h3.574L52.62,0,46.367,6.253h3.574v5.361ZM46.367,13.4H58.873v1.789H46.367Z" transform="translate(0)"></path>
-        </g>
-        </svg>Drop file here or Click to upload
-        </button>
-        <input type="file" name="file[]" id="upload_file" multiple="" accept=".txt, .DOCX, .DOC, .docx, .doc, .pdf, .PDf">
-        <span class="file-type-error" style="display:none;"></span>
-        </div>
-        <div class="upload_file_result" style="display: none;">
-        <ul class="ul_list"></ul>
-        </div>
-        <div class="amount-banner">
-        <div class="amnt-left">
-        <span class="off">25% Off</span>
-        <s class="real-price basePrice">PKR 12913.09</s>
-        </div>
-        <p class="symbole">PKR <span class="value offerPrice">9685.54</span></p>
-        </div>
-        </div>
-        <div class="form-loader" style="display: none;">
-        <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-rolling lm_loader">
-        <circle cx="50" cy="50" fill="none" stroke="#246ED0" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138" transform="rotate(287.866 50 50)">
-        <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;360 50 50" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform>
-        </circle>
-        </svg>
-        </div>
+              </div>
+              <div class="box select-bx select-bx-half questions_words">
+                <select id="no_of_w" aria-label="no_of_w">
+                  <option selected="" value="50">50 Words/Question</option>
+                </select>
+              </div>
+            </span>
+            <div
+              class="box select-bx select-bx-half page_words"
+              id="pages_count_parent"
+            >
+              <select
+                id="pages_count"
+                name="pages"
+                onchange="price_calculater_order()"
+                aria-label="pages"
+                style="color: rgb(29, 29, 29)"
+              >
+                <option value="" disabled="">Select</option>
+                <option value="1" selected="selected">
+                  1 Page / 250 Words
+                </option>
+                <option value="2">2 Pages / 500 Words</option>
+                <option value="3">3 Pages / 750 Words</option>
+                <option value="4">4 Pages / 1000 Words</option>
+                <option value="5">5 Pages / 1250 Words</option>
+                <option value="6">6 Pages / 1500 Words</option>
+                <option value="7">7 Pages / 1750 Words</option>
+                <option value="8">8 Pages / 2000 Words</option>
+                <option value="9">9 Pages / 2250 Words</option>
+                <option value="10">10 Pages / 2500 Words</option>
+                <option value="11">11 Pages / 2750 Words</option>
+                <option value="12">12 Pages / 3000 Words</option>
+                <option value="13">13 Pages / 3250 Words</option>
+                <option value="14">14 Pages / 3500 Words</option>
+                <option value="15">15 Pages / 3750 Words</option>
+                <option value="16">16 Pages / 4000 Words</option>
+                <option value="17">17 Pages / 4250 Words</option>
+                <option value="18">18 Pages / 4500 Words</option>
+                <option value="19">19 Pages / 4750 Words</option>
+                <option value="20">20 Pages / 5000 Words</option>
+                <option value="21">21 Pages / 5250 Words</option>
+                <option value="22">22 Pages / 5500 Words</option>
+                <option value="23">23 Pages / 5750 Words</option>
+                <option value="24">24 Pages / 6000 Words</option>
+                <option value="25">25 Pages / 6250 Words</option>
+                <option value="26">26 Pages / 6500 Words</option>
+                <option value="27">27 Pages / 6750 Words</option>
+                <option value="28">28 Pages / 7000 Words</option>
+                <option value="29">29 Pages / 7250 Words</option>
+                <option value="30">30 Pages / 7500 Words</option>
+                <option value="40">40 Pages / 10000 Words</option>
+                <option value="50">50 Pages / 12500 Words</option>
+                <option value="60">60 Pages / 15000 Words</option>
+                <option value="70">70 Pages / 17500 Words</option>
+                <option value="80">80 Pages / 20000 Words</option>
+                <option value="90">90 Pages / 22500 Words</option>
+                <option value="100">100 Pages / 25000 Words</option>
+                <option value="110">110 Pages / 27500 Words</option>
+                <option value="120">120 Pages / 30000 Words</option>
+                <option value="130">130 Pages / 32500 Words</option>
+                <option value="140">140 Pages / 35000 Words</option>
+                <option value="150">150 Pages / 37500 Words</option>
+                <option value="160">160 Pages / 40000 Words</option>
+                <option value="180">180 Pages / 45000 Words</option>
+                <option value="200">200 Pages / 50000 Words</option>
+                <option value="250">250 Pages / 62500 Words</option>
+              </select>
+            </div>
+            <div
+              class="box select-bx select-bx-half select-bx-last"
+              id="urgency_drop"
+            >
+              <select
+                id="urgency"
+                name="urgency"
+                onchange="price_calculater_order()"
+                aria-label="urgency"
+                style="color: rgb(29, 29, 29)"
+              >
+                <option value="" disabled="">-- Select Urgency --</option>
+
+                <option value="60h">4 hours</option>
+
+                <option value="61h">8 hours</option>
+
+                <option value="62h">16 hours</option>
+
+                <option selected="" value="19">1 Day</option>
+
+                <option value="18">2 Days</option>
+
+                <option value="1">3 Days</option>
+
+                <option value="2">4 Days</option>
+
+                <option value="3">5 Days</option>
+
+                <option value="22">6 Days</option>
+
+                <option value="23">7 Days</option>
+
+                <option value="24">8 Days</option>
+
+                <option value="25">9 Days</option>
+
+                <option value="4">10 Days</option>
+
+                <option value="5">15 Days</option>
+
+                <option value="6">20 Days</option>
+
+                <option value="7">25 Days</option>
+
+                <option value="8">30 Days</option>
+              </select>
+            </div>
+            <div class="upload_file_box" style="display: none">
+              <button class="upload-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10.506"
+                  height="13.188"
+                  viewBox="0 0 12.506 15.188"
+                >
+                  <g transform="translate(-46.367)">
+                    <path
+                      d="M49.942,11.614H55.3V6.253h3.574L52.62,0,46.367,6.253h3.574v5.361ZM46.367,13.4H58.873v1.789H46.367Z"
+                      transform="translate(0)"
+                    ></path>
+                  </g></svg
+                >Drop file here or Click to upload
+              </button>
+              <input
+                type="file"
+                name="file[]"
+                id="upload_file"
+                multiple=""
+                accept=".txt, .DOCX, .DOC, .docx, .doc, .pdf, .PDf"
+              />
+              <span class="file-type-error" style="display: none"></span>
+            </div>
+            <div class="upload_file_result" style="display: none">
+              <ul class="ul_list"></ul>
+            </div>
+            <div class="amount-banner">
+              <div class="amnt-left">
+                <span class="off">25% Off</span>
+                <s class="real-price basePrice">PKR 7598.59</s>
+              </div>
+              <p class="symbole">
+                PKR <span class="value offerPrice">5697.48</span>
+              </p>
+            </div>
+          </div>
+          <div class="form-loader" style="display: none">
+            <svg
+              width="50"
+              height="50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="xMidYMid"
+              class="lds-rolling lm_loader"
+            >
+              <circle
+                cx="50"
+                cy="50"
+                fill="none"
+                stroke="#246ED0"
+                stroke-width="10"
+                r="35"
+                stroke-dasharray="164.93361431346415 56.97787143782138"
+                transform="rotate(287.866 50 50)"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  type="rotate"
+                  calcMode="linear"
+                  values="0 50 50;360 50 50"
+                  keyTimes="0;1"
+                  dur="1s"
+                  begin="0s"
+                  repeatCount="indefinite"
+                ></animateTransform>
+              </circle>
+            </svg>
+          </div>
         </div>
         <button type="submit" class="con_btn button">Order Now</button>
-        </form>
-      
+      </form>
+      <div class="footer-sidebar">
+        <div class="side-parts">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36.241"
+            height="31.72"
+            viewBox="0 0 44.241 39.72"
+          >
+            <g transform="translate(0 0)">
+              <path
+                d="M-133.693,2.047a3.4,3.4,0,0,1,3.568-3.2,3.4,3.4,0,0,1,3.569,3.2,3.4,3.4,0,0,1-3.569,3.2A3.4,3.4,0,0,1-133.693,2.047Zm-37.105,0a3.4,3.4,0,0,1,3.568-3.2,3.4,3.4,0,0,1,3.568,3.2,3.4,3.4,0,0,1-3.568,3.2A3.4,3.4,0,0,1-170.8,2.047ZM-152.246-1.8A3.4,3.4,0,0,1-148.677-5a3.4,3.4,0,0,1,3.568,3.2,3.4,3.4,0,0,1-3.568,3.2A3.4,3.4,0,0,1-152.246-1.8Z"
+                transform="translate(170.799 12.047)"
+                fill="#f0bc5e"
+              ></path>
+              <path
+                d="M-168.245,34.719l2.035-5.014a6.309,6.309,0,0,1,5.128-3.739l.526-.067a10.476,10.476,0,0,1-5.862-4.311l-.61-.961h1.23a4.084,4.084,0,0,0,4.281-3.844V12.3a10.15,10.15,0,0,1,6.089-9.067l.11-.049A5.982,5.982,0,0,1-150.1.126a5.984,5.984,0,0,1,5.218,3.056l.09.04a10.16,10.16,0,0,1,6.109,9.077v4.481a4.083,4.083,0,0,0,4.28,3.843h1.232l-.609.961a10.478,10.478,0,0,1-5.862,4.312l.526.068A6.3,6.3,0,0,1-133.99,29.7l2.034,5.019Zm7.366-7.487a4.9,4.9,0,0,0-3.988,2.907l-1.337,3.3h32.213l-1.337-3.3a4.9,4.9,0,0,0-3.988-2.907l-6.331-.812-4.451,2.664-4.451-2.664Zm7.211-1.824,3.568,2.135,3.568-2.135V24.4a9.344,9.344,0,0,1-7.136,0Zm12.13-11.83v3.844a7.47,7.47,0,0,1-3.567,6.232V25.11h2.1a9.613,9.613,0,0,0,7.377-3.323,5.3,5.3,0,0,1-4.477-5V12.3a8.726,8.726,0,0,0-4.3-7.37c.008.107.018.213.018.322a4.806,4.806,0,0,1-1.428,3.388v.456h1.428v1.282h-1.431v2.562h-8.563V10.374h-1.426V9.094h1.426V8.637a4.812,4.812,0,0,1-1.425-3.384c0-.11.011-.216.019-.324a8.724,8.724,0,0,0-4.3,7.368v4.484a5.293,5.293,0,0,1-4.477,5,9.612,9.612,0,0,0,7.378,3.325h2.1V23.654a7.471,7.471,0,0,1-3.568-6.232V13.578h1.427v3.844c0,3.532,3.2,6.406,7.135,6.406s7.136-2.874,7.136-6.406V13.578Zm-11.416-1.922h5.708V10.374h-5.708Zm4.994-6.405a1.947,1.947,0,0,1-1.427,1.8V9.1h2.141V8.128l.2-.187a3.633,3.633,0,0,0,1.224-2.691A4.085,4.085,0,0,0-150.1,1.406a4.084,4.084,0,0,0-4.284,3.844,3.627,3.627,0,0,0,1.226,2.687l.2.188v.969h2.139V7.054a1.946,1.946,0,0,1-1.426-1.8,2.153,2.153,0,0,1,2.14-1.918A2.154,2.154,0,0,1-147.96,5.251Zm-2.139.64a.718.718,0,0,0,.67-.461.717.717,0,0,0-.191-.791.716.716,0,0,0-.806-.1.715.715,0,0,0-.386.715h0A.682.682,0,0,0-150.1,5.891Zm16.83,3.343a1.935,1.935,0,0,1,1.721-2.061,2.044,2.044,0,0,1,2.141,1.922,1.933,1.933,0,0,1-1.864,1.932h-.071A1.934,1.934,0,0,1-133.269,9.233Zm1.148-.185a.644.644,0,0,0,.573.688.681.681,0,0,0,.715-.641.645.645,0,0,0-.622-.644h-.024A.644.644,0,0,0-132.122,9.048ZM-170.5,10.121a1.931,1.931,0,0,1,0-2.054,1.934,1.934,0,0,1,1.849-.9,2.044,2.044,0,0,1,2.141,1.922,2.042,2.042,0,0,1-2.141,1.921,1.939,1.939,0,0,1-.212.012A1.931,1.931,0,0,1-170.5,10.121Zm1.522-1.742a.715.715,0,0,0-.386.715.681.681,0,0,0,.714.641.719.719,0,0,0,.671-.461.72.72,0,0,0-.191-.791.717.717,0,0,0-.48-.184A.717.717,0,0,0-168.981,8.379Zm23.925-8.564L-143.038-2l1.009.905L-144.048.721Zm-13.117-.906L-157.164-2l2.018,1.812-1.009.905Zm7.358-.706V-5h1.427v3.2Z"
+                transform="translate(172.222 5)"
+                fill="#212121"
+              ></path>
+            </g>
+          </svg>
+          <a href="/writers" class="clickable_link"
+            >Ph.D. Writers <span>For Best Assistance</span></a
+          >
         </div>
-</body>
+        <div class="side-parts">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30.363"
+            height="30.349"
+            viewBox="0 0 36.363 36.349"
+          >
+            <g transform="translate(0.01)">
+              <path
+                d="M29.316,31.663V22.281H28.144v9.381h-6.45v1.759a1.759,1.759,0,0,1-3.518,0V15.832a2.9,2.9,0,0,0-.6-1.759h8.81a1.761,1.761,0,0,1,1.759,1.759v4.1h1.173v-4.1A2.935,2.935,0,0,0,26.384,12.9H18.412a10.017,10.017,0,0,0-2.6-2.789,1.745,1.745,0,0,0-.9-3.048,6.378,6.378,0,0,0,1.5-4.131V1.76a1.759,1.759,0,1,0-3.518,0,.587.587,0,0,1-1.173,0,1.759,1.759,0,1,0-3.518,0,.586.586,0,1,1-1.173,0,1.759,1.759,0,0,0-3.518,0V2.933a6.378,6.378,0,0,0,1.5,4.131,1.746,1.746,0,0,0-.9,3.048,9.951,9.951,0,0,0,3.5,17.739V29.9a2.935,2.935,0,0,0,2.932,2.932H17v.586a2.935,2.935,0,0,0,2.932,2.932H33.421a2.935,2.935,0,0,0,2.932-2.932V31.663ZM4.691,1.76a.586.586,0,1,1,1.173,0,1.759,1.759,0,1,0,3.518,0,.586.586,0,1,1,1.173,0,1.759,1.759,0,0,0,3.518,0,.587.587,0,1,1,1.173,0V2.933a5.227,5.227,0,0,1-1.971,4.1H6.661a5.227,5.227,0,0,1-1.971-4.1Zm.586,6.45h9.381a.587.587,0,0,1,0,1.173H5.277a.587.587,0,1,1,0-1.173Zm-4.1,9.968a8.8,8.8,0,0,1,4.41-7.622h8.769A8.817,8.817,0,0,1,16.99,12.9H15.244a2.935,2.935,0,0,0-2.932,2.932v.586H5.863v1.173A1.761,1.761,0,0,1,7.622,19.35v7.3a8.8,8.8,0,0,1-6.449-8.473ZM8.8,29.9V19.35a2.9,2.9,0,0,0-.6-1.759h4.119V29.9a1.759,1.759,0,1,1-3.518,0Zm4.089,1.759a2.9,2.9,0,0,0,.6-1.759V15.832a1.759,1.759,0,0,1,3.518,0V31.663Zm22.3,1.759a1.761,1.761,0,0,1-1.759,1.759H22.279a2.916,2.916,0,0,0,.588-1.759v-.586H35.18v.586Z"
+                transform="translate(0 -0.001)"
+                fill="#212121"
+              ></path>
+              <rect
+                width="7.622"
+                height="1.173"
+                transform="translate(19.349 26.385)"
+                fill="#212121"
+              ></rect>
+              <rect
+                width="6.45"
+                height="1.173"
+                transform="translate(20.521 28.73)"
+                fill="#212121"
+              ></rect>
+              <path
+                d="M169.932,93.751a1.761,1.761,0,0,0-1.759,1.759,1.74,1.74,0,0,0,.266.919l-3.213,5.048a1.693,1.693,0,0,0-1.511.174l-1.5-.9a1.741,1.741,0,0,0,.1-.549,1.759,1.759,0,1,0-3.518,0,1.738,1.738,0,0,0,.213.821l-1.874,2.249a1.8,1.8,0,1,0,.862.8l1.874-2.249a1.742,1.742,0,0,0,1.623-.139l1.5.9a1.741,1.741,0,0,0-.1.549,1.759,1.759,0,0,0,3.518,0,1.739,1.739,0,0,0-.266-.919l3.212-5.048a1.757,1.757,0,1,0,.572-3.418Zm-13.486,11.727a.586.586,0,1,1,.586-.586.586.586,0,0,1-.586.586Zm3.518-5.277a.586.586,0,1,1,.586.586.586.586,0,0,1-.586-.586Zm4.691,3.518a.586.586,0,1,1,.586-.586.586.586,0,0,1-.586.586Zm5.277-7.622a.582.582,0,1,1,.415-.17.586.586,0,0,1-.415.17Z"
+                transform="translate(-135.339 -82.024)"
+                fill="#ffe066"
+              ></path>
+            </g>
+          </svg>
+          <a href="/plagiarism-checker" class="clickable_link"
+            ><span class="free">Free</span> Plagiarism Report</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="form.js"></script>
+  </body>
 </html>
