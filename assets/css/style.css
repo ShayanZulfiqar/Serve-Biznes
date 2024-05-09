@@ -28,7 +28,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .btn-outline-dark:hover {
-  background-color: #1e2330 !important;
+  background-color: #2d55cf !important;
   color: white !important;
   border-color: transparent !important;
 }
