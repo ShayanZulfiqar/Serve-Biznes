@@ -44,7 +44,6 @@
   background-color: rgb(80, 80, 235);
   border: 3px solid rgb(196, 196, 196);
   color: white;
-
 }
 
 .content-section .text-container .button-section .button1:hover {
@@ -222,7 +221,36 @@ img {
   color: white;
   background-color: #2f80ed;
 }
-.modal-content .modal-header{
-    color: white;
-    background-color: #1e2330;
+.modal-content .modal-header {
+  color: white;
+  background-color: #1e2330;
+}
+.carasoual_style {
+  background-color: #1e2330;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+  width: 31% !important;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .carasoual_style {
+    width: fit-content !important;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.carasoual_style h5 {
+  margin-top: 20px;
+  text-align: center;
+}
+.carasoual_style p {
+  margin-top: 20px;
+  text-align: center;
 }
