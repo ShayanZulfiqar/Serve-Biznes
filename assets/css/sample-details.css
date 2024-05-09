@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+h1,
+h4 {
+  font-weight: 600;
+}
+.sample-section:hover {
+  background-image: url("/assets/images/sample-page.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: top;
+  height: 500px;
+  width: auto;
+  filter: brightness(100%);
+}
+.sample-section {
+  background-image: url("/assets/images/sample-page.jpg");
+  background-color: rgba(0, 0, 0, 0.525);
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: top;
+  height: 500px;
+  width: auto;
+  filter: grayscale(100%);
+  transition-delay: 5s;
+}
+/* iejfdkjkjdsf */
+.sample-section .image-section .button-section .button1 {
+  background-color: #1e2330;
+  color: white;
+  border: 3px solid rgb(196, 196, 196);
+  color: white;
+}
+.sample-section .image-section .button-section .button2 {
+  background-color: transparent;
+  border: 3px solid rgb(196, 196, 196);
+}
+.sample-section .image-section .button-section .button1:hover {
+  background-color: transparent;
+  border: 3px solid white;
+}
+.sample-section .image-section .button-section .button2:hover {
+  background-color: #1e2330;
+  color: white;
+  border: 3px solid white;
+}
+/* aeflkdiadjfakwl */
+
+.sample-section .text-container .button-section .button1 {
+  background-color: #1e2330;
+  color: white;
+  border-color: transparent;
+}
+
+.sample-section .text-container .button-section .button1:hover {
+  background-color: transparent;
+  border-color: white !important;
+  color: white;
+}
+.sample-section .text-container .button-section .button2 {
+  color: white;
+  background-color: transparent;
+  border: 3px solid rgb(196, 196, 196);
+}
+
+/* select info  */
+.select_option .catgeroy {
+  width: 100%;
+  margin: 0 auto;
+}
+.select_option .catgeroy select {
+  border: 1px solid #1e2330;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
+  padding: 10px;
+}
+.select_option .catgeroy select option {
+  color: #1e2330;
+  font-size: 16px;
+  /* font-weight: 600; */
+  border-radius: 10px;
+  font-family: sans-serif;
+}
+.select_option_2 .input-group input {
+  padding: 7px;
+  border: 1px solid #1e2330;
+  border-radius: 10px;
+  width: 80%;
+}
+.select_option_2 .input-group-append{
+    position: relative;
+    right:3.7rem;
+    border: none;
+
+}
+.select_option_2 .input-group-append i{
+    padding: 10px;
+    
+}
+
+/* Card  */
+.card{
+    border: none;
+    background-color: #f6f6f6;
+}
+.card .card-body .card-title{
+    background-color: #1e2330;
+    color: white;
+    width: 40px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 7px;
+}
+.card .card-body .card-text{
+    border-bottom: 1px solid #c4c4cc;
+}
+.main_content_text h2{
+    color: #1e2330;
+    font-family: sans-serif;
+}
+.main_content_text p{
+    font-family: sans-serif;
+    font-weight: 500;
+}
