@@ -1,39 +1,158 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
-  h1, h4{
-      font-weight: 600;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-  
-  }
-  a:hover {
-    text-decoration: underline;
-    
-  }
-.banner-section .image-section{
-    background-image: url("/assets/images/business\ writing.jpg");
-    background-color: rgba(0, 0, 0, 0.525);
-    background-blend-mode: multiply;
-    height: 500px;
-    width: auto;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-.banner-section .image-section .button-section .button1{
-    background-color: #1e2330; color: white;
-    border: 3px solid rgb(196, 196, 196);
+h1,
+h4 {
+  font-weight: 600;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
+.banner-section-Website-Content {
+  background-image: url("/assets/images/content-web1\ \(2\).jpg");
+  background-color: rgba(0, 0, 0, 0.525);
+  background-blend-mode: multiply;
+  height: 500px;
+  width: auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-section-Website-Content .image-section .col-lg-8 {
+  margin-top: 100px;
+}
+.banner-section-Website-Content .image-section .button-section .button1 {
+  background-color: #1e2330;
+  color: white;
+  border: 3px solid rgb(196, 196, 196);
+}
+.banner-section-Website-Content .image-section .button-section .button1:hover {
+  background-color: blue;
+  color: white;
+  border: 3px solid rgb(196, 196, 196);
+}
+.banner-section-Newsletters {
+  background-image: url("/assets/images/newsletter1.jpg");
+  background-color: rgba(0, 0, 0, 0.525);
+  background-blend-mode: multiply;
+  height: 500px;
+  width: auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-section-Newsletters .image-section .col-lg-8 {
+  margin-top: 100px;
 }
 
-.banner-section .image-section .button-section .button1:hover{
-    background-color: blue; color: white;
-    border: 3px solid rgb(196, 196, 196);
+.banner-section-Newsletters .image-section .button-section .button1 {
+  background-color: #1e2330;
+  color: white;
+  border: 3px solid rgb(196, 196, 196);
+}
+.banner-section-Newsletters .image-section .button-section .button1:hover {
+  background-color: blue;
+  color: white;
+  border: 3px solid rgb(196, 196, 196);
+}
+.banner-section-Press-Releases {
+  background-image: url("/assets/images/press1.jpg");
+  background-color: rgba(0, 0, 0, 0.525);
+  background-blend-mode: multiply;
+  height: 500px;
+  width: auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-section-Press-Releases .image-section .col-lg-8 {
+  margin-top: 100px;
+}
+.banner-section-Press-Releases .image-section .button-section .button1 {
+  background-color: #1e2330;
+  color: white;
+  border: 3px solid rgb(196, 196, 196);
+}
+.banner-section-Press-Releases .image-section .button-section .button1:hover {
+  background-color: blue;
+  color: white;
+  border: 3px solid rgb(196, 196, 196);
+}
+.banner-section-Annual-Reports {
+  background-image: url("/assets/images/Annual\ Reports.jpg");
+  background-color: rgba(0, 0, 0, 0.525);
+  background-blend-mode: multiply;
+  height: 500px;
+  width: auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-section-Annual-Reports .image-section .col-lg-8 {
+  margin-top: 100px;
+}
+.banner-section-Annual-Reports .image-section .button-section .button1 {
+  background-color: #1e2330;
+  color: white;
+  border: 3px solid rgb(196, 196, 196);
+}
+.banner-section-Annual-Reports .image-section .button-section .button1:hover {
+  background-color: blue;
+  color: white;
+  border: 3px solid rgb(196, 196, 196);
+}
+.banner-section-Grant-Proposals {
+  background-image: url("/assets/images/grant-proposal.jpg");
+  background-color: rgba(0, 0, 0, 0.525);
+  background-blend-mode: multiply;
+  height: 500px;
+  width: auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-section-Grant-Proposals .image-section .col-lg-8 {
+  margin-top: 100px;
+}
+.banner-section-Grant-Proposals .image-section .button-section .button1 {
+  background-color: #1e2330;
+  color: white;
+  border: 3px solid rgb(196, 196, 196);
+}
+
+.banner-section-Grant-Proposals .image-section .button-section .button1:hover {
+  background-color: blue;
+  color: white;
+  border: 3px solid rgb(196, 196, 196);
+}
+.banner-section .image-section {
+  background-image: url("/assets/images/business\ writing.jpg");
+  background-color: rgba(0, 0, 0, 0.525);
+  background-blend-mode: multiply;
+  height: 500px;
+  width: auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-section .image-section .button-section .button1 {
+  background-color: #1e2330;
+  color: white;
+  border: 3px solid rgb(196, 196, 196);
+}
+
+.banner-section .image-section .button-section .button1:hover {
+  background-color: blue;
+  color: white;
+  border: 3px solid rgb(196, 196, 196);
 }
 
 /* .banner-section .image-section .button-section .button2{
@@ -46,62 +165,61 @@
     border: 3px solid white;
 
 } */
-.services-section i{
-    font-size: 40px;
+.services-section i {
+  font-size: 40px;
 }
-.services-section button:hover{
-    background-color: #1e2330; color: white;
-    color: white;
-}
-
-.info-section .button-section button:hover{
-    background-color: #1e2330; color: white;
-color: white;
-
-}
-.info-section .button-section a{
-margin-left: 15px;
+.services-section button:hover {
+  background-color: #1e2330;
+  color: white;
+  color: white;
 }
 
-.detail-section .text-section p{
-    font-size: 18px;
-    color: rgb(55, 55, 55);
-
+.info-section .button-section button:hover {
+  background-color: #1e2330;
+  color: white;
+  color: white;
+}
+.info-section .button-section a {
+  margin-left: 15px;
 }
 
-.detail-section .text-section h3{
-    color: rgb(55, 55, 55);
-    margin-top: 30px;
-
-}
-.detail-section .text-section .button2{
-    background-color: transparent;
-    border-color: grey;
-}
-.detail-section .text-section .button2:hover{
-    background-color: rgb(88, 88, 254);
-    border-color: blue;
-    color: white;
-}
-.info-section .text-section .cards-section .card .card-body button{
-    background-color: rgb(88, 88, 254) ;
-    border-color: rgb(88, 88, 254);
-    color: white;
-}
-.info-section .text-section .cards-section .card .card-body button:hover{
-    background-color: transparent ;
-    border-color: black;
-    color: black;
-    transition: all 0.5 ease-in-out;
-}
-.content-solution .container .row .card{
-    border: none;
+.detail-section .text-section p {
+  font-size: 18px;
+  color: rgb(55, 55, 55);
 }
 
- .card .card-body i{
-    font-size: 50px;
-    color: #2D97C8;
-    margin-top: 23px;
-    margin-bottom: 23px;
+.detail-section .text-section h3 {
+  color: rgb(55, 55, 55);
+  margin-top: 30px;
+}
+.detail-section .text-section .button2 {
+  background-color: transparent;
+  border-color: grey;
+}
+.detail-section .text-section .button2:hover {
+  background-color: rgb(88, 88, 254);
+  border-color: blue;
+  color: white;
+}
+.info-section .text-section .cards-section .card .card-body button {
+  background-color: rgb(88, 88, 254);
+  border-color: rgb(88, 88, 254);
+  color: white;
+}
+.info-section .text-section .cards-section .card .card-body button:hover {
+  background-color: transparent;
+  border-color: black;
+  color: black;
+  transition: all 0.5 ease-in-out;
+}
+.content-solution .container .row .card {
+  border: none;
+}
+
+.card .card-body i {
+  font-size: 50px;
+  color: #2d97c8;
+  margin-top: 23px;
+  margin-bottom: 23px;
 }
 /* cards css */
