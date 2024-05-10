@@ -702,7 +702,7 @@ h1 {
 .container {
   margin: 0 auto;
   /* padding: 4rem; */
-  width: 70%;
+  /* width: 70%; */
 }
 
 .accordion .accordion-item {
