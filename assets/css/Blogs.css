@@ -34,7 +34,7 @@
     padding-top: 10%;
 }
 .banner-section .image-section .button-section .button1{
-    background-color: #1e2330; color: white;
+    background-color: rgb(80, 80, 235); color: white;
     border: 3px solid rgb(196, 196, 196);
 }
 .banner-section .image-section .button-section .button2{
@@ -47,7 +47,7 @@
 
 }
 .banner-section .image-section .button-section .button2:hover{
-    background-color: #1e2330; color: white;
+    background-color: rgb(80, 80, 235); color: white;
     border: 3px solid white;
 
 }

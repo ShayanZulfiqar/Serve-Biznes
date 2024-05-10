@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 * {
@@ -7,22 +7,27 @@
   box-sizing: border-box;
   font-family: "Poppins";
 }
-:root{
+:root {
   --font-family: "Poppins";
 }
 a:hover {
   text-decoration: none !important;
 }
-h1,h2,h3,h4,h5,h6{
-    font-weight: 600 !important;
-    font-family: var(--font-family);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600 !important;
+  font-family: var(--font-family);
 }
-.btn-dark:hover{
+.btn-dark:hover {
   background: transparent !important;
   border-color: black !important;
   color: black !important;
 }
-.btn-outline-dark { 
+.btn-outline-dark {
   border-radius: 25px;
   /* font-weight: 400; */
 }
@@ -33,32 +38,34 @@ h1,h2,h3,h4,h5,h6{
   border-color: transparent !important;
 }
 
-button, .btn{
-  transition: all .4s ease-in-out;
+button,
+.btn {
+  transition: all 0.4s ease-in-out;
   box-shadow: none;
-  font-size: 15px ;
+  font-size: 15px;
   font-weight: 600;
   font-family: "Poppins";
 }
 
-.link{
+.link {
   text-decoration: none;
   color: black;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.link:hover{
+.link:hover {
   text-decoration: underline;
   color: #434343;
 }
 
-h1, h4{
-    font-weight: 600;
+h1,
+h4 {
+  font-weight: 600;
 }
 .navbar {
   background: #1e2330;
 }
-.navbar .navbar-nav{
-  gap: 1rem;
+.navbar .navbar-nav {
+  gap: 1.3rem;
 }
 .navbar-collapse ul li a {
   font-size: 16px;
@@ -66,7 +73,7 @@ h1, h4{
   font-family: "Poppins";
   position: relative;
 }
-.navbar-collapse ul li a::before{
+.navbar-collapse ul li a::before {
   content: "";
   width: 20%;
   overflow: hidden;
@@ -77,9 +84,9 @@ h1, h4{
   background-color: white;
   /* transform: scale(0); */
   opacity: 0;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
-.navbar-collapse ul li a:hover::before{
+.navbar-collapse ul li a:hover::before {
   width: 80%;
   opacity: 1;
   /* transform: scale(1); */
@@ -102,14 +109,12 @@ h1, h4{
   font-weight: 700;
   color: white;
 }
-.navbar button:hover a{
+.navbar button:hover a {
   color: white;
 }
 .navbar button a {
   text-decoration: none;
 }
-
-
 
 .container-main .container-image {
   height: 500px;
@@ -124,7 +129,8 @@ h1, h4{
   margin-right: 10px;
 }
 .container-services .section-buttons button:hover {
-  background-color: #1e2330; color: white;
+  background-color: #1e2330;
+  color: white;
   border-radius: 25px;
   color: white;
   font-weight: 500;
@@ -656,7 +662,8 @@ h1 {
 
 .btn-primary:hover {
   color: white;
-  background-color: #1e2330; color: white;
+  background-color: #1e2330;
+  color: white;
   box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
   transform: translateY(-3px);
 }
@@ -684,7 +691,8 @@ h1 {
 }
 .container-get-started .button1:hover {
   /* border-radius: 100px; */
-  background-color: #1e2330; color: white;
+  background-color: #1e2330;
+  color: white;
   color: white;
 }
 .container-get-started .button2 {
@@ -692,7 +700,8 @@ h1 {
 }
 .container-get-started .button2:hover {
   border-radius: 25px;
-  background-color: #1e2330; color: white;
+  background-color: #1e2330;
+  color: white;
   color: white;
 }
 /* Faqs */
@@ -905,7 +914,7 @@ h1 {
 
 .footer-col .icons i {
   color: #afb6c7;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .footer-col .icons i:hover {
@@ -957,14 +966,14 @@ h1 {
   }
 }
 @media screen and (max-width: 650px) {
-  .container-services img{
-    width: 300px ;
+  .container-services img {
+    width: 300px;
     margin-top: 10px;
   }
 }
 @media screen and (max-width: 650px) {
-  .container-choice img{
-    width: 300px ;
+  .container-choice img {
+    width: 300px;
     margin-bottom: 10px;
   }
 }
