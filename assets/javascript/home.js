@@ -207,3 +207,29 @@ var dropdownElementList = [].slice.call(
 var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
   return new bootstrap.Dropdown(dropdownToggleEl);
 });
+
+// service
+
+const servicesDropdown = document.getElementById("services-dropdown");
+
+// Show the dropdown when hovering over the Services item
+servicesDropdown.addEventListener("mouseover", function () {
+  // Open the dropdown
+  let dropdownToggle = servicesDropdown.querySelector(".dropdown-toggle");
+  let dropdownMenu = servicesDropdown.querySelector(".dropdown-menu");
+  if (dropdownToggle && dropdownMenu) {
+    dropdownMenu.classList.add("show");
+    dropdownToggle.setAttribute("aria-expanded", "true");
+  }
+});
+
+// Hide the dropdown when mouse leaves the Services item
+servicesDropdown.addEventListener("mouseleave", function () {
+  // Close the dropdown
+  let dropdownToggle = servicesDropdown.querySelector(".dropdown-toggle");
+  let dropdownMenu = servicesDropdown.querySelector(".dropdown-menu");
+  if (dropdownToggle && dropdownMenu) {
+    dropdownMenu.classList.remove("show");
+    dropdownToggle.setAttribute("aria-expanded", "false");
+  }
+});
