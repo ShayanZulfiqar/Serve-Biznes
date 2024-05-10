@@ -25,15 +25,15 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.banner-section-Website-Content .image-section .col-lg-8 {
+.banner-section-Website-Content .insight-section .col-lg-8 {
   margin-top: 100px;
 }
-.banner-section-Website-Content .image-section .button-section .button1 {
-  background-color: #1e2330;
-  color: white;
+.banner-section-Website-Content .insight-section .button-section .button1 {
+  background-color: transparent;
+  color: white !important;
   border: 3px solid rgb(196, 196, 196);
 }
-.banner-section-Website-Content .image-section .button-section .button1:hover {
+.banner-section-Website-Content .insight-section .button-section .button1:hover {
   background-color: blue;
   color: white;
   border: 3px solid rgb(196, 196, 196);
