@@ -419,7 +419,7 @@ h1 {
 /* form */
 
 .side-bar {
-  width: 32%;
+  /* width: 32%; */
   background: #fff;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
@@ -1065,10 +1065,11 @@ h1 {
   background: transparent;
   color: black;
   border-color: 2px solid blue;
+  /* height: 90px; */
 }
 .container-services button:hover{
-  background: rgb(55, 55, 181);
-  color: white;
+  /* background: rgb(55, 55, 181); */
+  /* color: white; */
   border-color: 2px solid rgb(80, 80, 235) ;
 }
 
