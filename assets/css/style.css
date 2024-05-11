@@ -67,6 +67,23 @@ h4 {
 .navbar .navbar-nav {
   gap: 1.3rem;
 }
+@media (max-width: 1000px){
+  .navbar .navbar-nav {
+    gap: 0rem;
+  }
+}
+.toggle-btn{
+  display: flex;
+  align-items: center;
+  gap: 1rem ;
+}
+.toggle-btn .login_icon{
+  font-size: 25px;
+  /* margin-right: 10px; */
+}
+.navbar-toggler{
+  background: white !important;
+}
 .navbar-collapse ul li a {
   font-size: 16px;
   font-weight: 500;
@@ -1058,6 +1075,11 @@ h1 {
 
 
 /* services cards icons  */
+@media (max-width: 650px) {
+  .container-services button{
+    font-size: 10px;
+  } 
+}
 
 .service-single {
   overflow: hidden;

@@ -27,10 +27,14 @@
       <div class="container-fluid">
         <a class="navbar-brand text-white" href="index.html"><img src="assets/images/Serve Biznes logo png.png" alt=""
             width="60px" /></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+            <div class="toggle-btn">
+              <a href="login.html" class="d-block d-lg-none"><i class="fa-solid fa-user text-light login_icon"></i></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+           
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="order-item navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -109,7 +113,7 @@
             </li>
 
           </ul>
-          <span class="navbar-text">
+          <span class="navbar-text d-none d-lg-block">
             <button class="px-3 py-2 btn btn-light border-2">
               <a href="login.html">Sign In</a>
             </button>
@@ -326,30 +330,240 @@
     <hr />
     <!-- Expert writing section -->
     <div class="container-expert px-5 mt-5 gap-2">
-      <h2>Expert Writing Services for Businesses</h2>
+      <h2>Expert Writing Services </h2>
       <div class="row mt-5">
-        <div class="col-lg-4 px-3">
+        <div class="col-lg-4 px-3 mt-2 ">
           <div class="card">
             <div class="card-body">
               <i class="fa-solid fa-cube"></i>
               <h4 class="card-title">
-                Customized Writing Solutions for Every Need
+                Customized Writing Solutions for Business
               </h4>
               <p class="card-text">
                 Our team of professional writers can help you with your
                 academic writing requirements including essays, research
                 papers, dissertations, reports and more.
               </p>
-              <a href="#" class="card-link">Learn more ></a>
+              <!-- <a href="#" class="card-link">Learn more ></a> -->
+              <button class="px-2 px-md-4 py-2 rounded-5" data-bs-toggle="collapse" data-bs-target="#demo" active>
+                Business Writing
+              </button>
+            </div>
+          </div>
+          <div class="container">
+            <div id="demo" class="collapse mt-4 p-5">
+              <div class="row">
+                <!-- card 01 -->
+                <div class="col-lg-12 col-md-6 col-sm-12 text-start p-1">
+                  <div class="service-item service-dianuj">
+                    <div class="service-single">
+                      <div class="service-img">
+                        <img src="assets/images/business1.jpg" alt="Service Frequency Calculator" height="200px" />
+                      </div>
+                      <div class="service-content long-heading">
+                        <h3>
+                          <a class="" href="Business_writing/Business_Plans.html"> Business Plans </a>
+                        </h3>
+                        <p>
+                          Crafting comprehensive plans that outline the business’s
+                          strategy.
+                        </p>
+                        <a href="Business_writing/Business_Plans.html"> Check Now </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 02 -->
+                <div class="col-lg-12 col-md-6 col-sm-12 text-start p-1">
+                  <div class="service-item service-dianuj">
+                    <div class="service-single">
+                      <div class="service-img">
+                        <img src="assets/images/business2.jpg" alt="Service Frequency Calculator" height="200px" />
+                      </div>
+                      <div class="service-content long-heading">
+                        <h3>
+                          <a class="" href="Business_writing/Grant_Proposals.html"> Grant Proposals </a>
+                        </h3>
+                        <p>
+                          Writing proposals to secure funding from government
+                          entities.
+                        </p>
+                        <a href="Business_writing/Grant_Proposals.html"> Check Now </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 03 -->
+                <div class="col-lg-12 col-md-6 col-sm-12 text-start p-1">
+                  <div class="service-item service-dianuj">
+                    <div class="service-single">
+                      <div class="service-img">
+                        <img src="assets/images/business3 (2).jpg" alt="Service Frequency Calculator" height="200px" />
+                      </div>
+                      <div class="service-content long-heading">
+                        <h3>
+                          <a class="" href="#"> Annual Reports </a>
+                        </h3>
+                        <p>
+                          Developing detailed annual reports that communicate
+                          business.
+                        </p>
+                        <a href="#"> Check Now </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 04 -->
+                <div class="col-lg-12 col-md-6 col-sm-12 text-start p-1">
+                  <div class="service-item service-dianuj">
+                    <div class="service-single">
+                      <div class="service-img">
+                        <img src="assets/images/business4.jpg" alt="Service Frequency Calculator" height="200px" />
+                      </div>
+                      <div class="service-content long-heading">
+                        <h3>
+                          <a class="" href="#"> Press Releases </a>
+                        </h3>
+                        <p>
+                          Creating press releases to announce company news, product
+                          launches.
+                        </p>
+                        <a href="#"> Check Now </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 05 -->
+                <div class="col-lg-12 col-md-6 col-sm-12 text-start p-1">
+                  <div class="service-item service-dianuj">
+                    <div class="service-single">
+                      <div class="service-img">
+                        <img src="assets/images/business5.jpg" alt="Service Frequency Calculator" height="200px" />
+                      </div>
+                      <div class="service-content long-heading">
+                        <h3>
+                          <a class="" href="#"> Newsletters </a>
+                        </h3>
+                        <p>
+                          Producing engaging newsletters for internal staff updates
+                          .
+                        </p>
+                        <a href="#"> Check Now </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 06 -->
+                <div class="col-lg-12 col-md-6 col-sm-12 text-start p-1">
+                  <div class="service-item service-dianuj">
+                    <div class="service-single">
+                      <div class="service-img">
+                        <img src="assets/images/business6.jpg" alt="Service Frequency Calculator" height="200px" />
+                      </div>
+                      <div class="service-content long-heading">
+                        <h3>
+                          <a class="" href="#"> Website Content </a>
+                        </h3>
+                        <p>
+                          Writing or revamping content for websites, including
+                          landing pages.
+                        </p>
+                        <a href="#"> Check Now </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 07 -->
+                <div class="col-lg-12 col-md-6 col-sm-12 text-start p-1">
+                  <div class="service-item service-dianuj">
+                    <div class="service-single">
+                      <div class="service-img">
+                        <img src="assets/images/business7.jpg" alt="Service Frequency Calculator" height="200px" />
+                      </div>
+                      <div class="service-content long-heading">
+                        <h3>
+                          <a class="" href="#"> Case Studies </a>
+                        </h3>
+                        <p>
+                          Documenting customer success stories or product
+                          applications.
+                        </p>
+                        <a href="#"> Check Now </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 08 -->
+                <div class="col-lg-12 col-md-6 col-sm-12 text-start p-1">
+                  <div class="service-item service-dianuj">
+                    <div class="service-single">
+                      <div class="service-img">
+                        <img src="assets/images/business8.jpg" alt="Service Frequency Calculator" height="200px" />
+                      </div>
+                      <div class="service-content long-heading">
+                        <h3>
+                          <a class="" href="#"> Social Media Content </a>
+                        </h3>
+                        <p>
+                          Generating content for platforms like LinkedIn, Twitter,
+                          and Facebook.
+                        </p>
+                        <a href="#"> Check Now </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 09 -->
+                <div class="col-lg-12 col-md-6 col-sm-12 text-start p-1">
+                  <div class="service-item service-dianuj">
+                    <div class="service-single">
+                      <div class="service-img">
+                        <img src="assets/images/business9.jpg" alt="Service Frequency Calculator" height="200px" />
+                      </div>
+                      <div class="service-content long-heading">
+                        <h3>
+                          <a class="" href="#"> Training Manuals </a>
+                        </h3>
+                        <p>
+                          Developing comprehensive guides and manuals for new
+                          employees.
+                        </p>
+                        <a href="#"> Check Now </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card 10 -->
+                <div class="col-lg-12 col-md-6 col-sm-12 text-start p-1">
+                  <div class="service-item service-dianuj">
+                    <div class="service-single">
+                      <div class="service-img">
+                        <img src="assets/images/business10.jpeg" alt="Service Frequency Calculator" height="200px" />
+                      </div>
+                      <div class="service-content long-heading">
+                        <h3>
+                          <a class="" href="#"> Executive Speeches </a>
+                        </h3>
+                        <p>
+                          Crafting speeches for company executives for events,
+                          conferences, effectively.
+                        </p>
+                        <a href="#"> Check Now </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        
         <div class="col-lg-4 px-3">
           <div class="card">
             <div class="card-body">
               <i class="fa-solid fa-cube"></i>
               <h4 class="card-title">
-                High-Quality Writing Services for Any Subject
+                High-Quality Writing Services for Academic
               </h4>
               <p class="card-text">
                 No matter the topic or complexity, our experienced writers can
@@ -365,7 +579,7 @@
             <div class="card-body">
               <i class="fa-solid fa-cube"></i>
               <h4 class="card-title">
-                Reliable and Timely Thesis Writing Assistance
+                Customized Solutions for Content Writing
               </h4>
               <p class="card-text">
                 Need help with your thesis? Our expert writers provide
@@ -1056,15 +1270,15 @@
     <div class="container-services mt-5 text-center">
       <h2>Our Services</h2>
 
-      <button class="px-4 py-2 rounded-5" data-bs-toggle="collapse" data-bs-target="#demo" active>
+      <button class="px-2 px-md-4 py-2 rounded-5" data-bs-toggle="collapse" data-bs-target="#demo" active>
         Business Writing
       </button>
 
-      <button class="px-4 py-2 rounded-5" data-bs-toggle="collapse" data-bs-target="#demo1">
+      <button class="px-2 px-md-4 py-2 rounded-5" data-bs-toggle="collapse" data-bs-target="#demo1">
         Academic Writing
       </button>
 
-      <button class="px-4 py-2 rounded-5" data-bs-toggle="collapse" data-bs-target="#demo2">
+      <button class="px-2 px-md-4 py-2 rounded-5" data-bs-toggle="collapse" data-bs-target="#demo2">
         Content Writing
       </button>
 
