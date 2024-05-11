@@ -67,6 +67,23 @@ h4 {
 .navbar .navbar-nav {
   gap: 1.3rem;
 }
+@media (max-width: 1000px){
+  .navbar .navbar-nav {
+    gap: 0rem;
+  }
+}
+.toggle-btn{
+  display: flex;
+  align-items: center;
+  gap: 1rem ;
+}
+.toggle-btn .login_icon{
+  font-size: 25px;
+  /* margin-right: 10px; */
+}
+.navbar-toggler{
+  background: white !important;
+}
 .navbar-collapse ul li a {
   font-size: 16px;
   font-weight: 500;
@@ -1044,14 +1061,25 @@ h1 {
   color: black;
   border-radius: 2px solid black;
 }
-.container button{
-  background: blue;
+.container-services button{
+  background: transparent;
+  color: black;
+  border-color: 2px solid blue;
+}
+.container-services button:hover{
+  background: rgb(55, 55, 181);
   color: white;
-  border-radius: 2px solid blue;
+  border-color: 2px solid rgb(80, 80, 235) ;
 }
 
 
+
 /* services cards icons  */
+@media (max-width: 650px) {
+  .container-services button{
+    font-size: 10px;
+  } 
+}
 
 .service-single {
   overflow: hidden;
