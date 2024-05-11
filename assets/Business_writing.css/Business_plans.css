@@ -223,3 +223,12 @@ a:hover {
   margin-bottom: 23px;
 }
 /* cards css */
+
+
+@media screen (min-width:425px)  {
+  .detail-section .text-section{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+}

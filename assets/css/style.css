@@ -1044,11 +1044,17 @@ h1 {
   color: black;
   border-radius: 2px solid black;
 }
-.container button{
-  background: blue;
-  color: white;
-  border-radius: 2px solid blue;
+.container-services button{
+  background: transparent;
+  color: black;
+  border-color: 2px solid blue;
 }
+.container-services button:hover{
+  background: rgb(55, 55, 181);
+  color: white;
+  border-color: 2px solid rgb(80, 80, 235) ;
+}
+
 
 
 /* services cards icons  */

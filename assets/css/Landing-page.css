@@ -6,8 +6,8 @@
 }
 .main-banner {
     margin-top: 7px;
-    background-image: url("/assets/images/Landing.jpg");
-    height: 580px ;
+    background-image: url("/assets/images/business3\ \(2\).jpg");
+    height: 480px ;
     width: auto;
     background-position: top;
     background-repeat: no-repeat;
@@ -21,6 +21,13 @@
 }
 .main-banner .button-section .button-container  button{
     background-color: #040273;
+    border-radius: 25px;
     border: 3px solid black;
+    width: 200px;
+}
+.main-banner .button-section .button-container  button:hover{
+    background-color: white;
+    border: 3px solid white;
+    color: black !important;
     width: 200px;
 }
