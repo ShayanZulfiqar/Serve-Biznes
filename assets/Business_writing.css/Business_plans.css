@@ -134,12 +134,12 @@ a:hover {
   border: 3px solid rgb(196, 196, 196);
 }
 .banner-section .image-section {
-  background-image: url("/assets/images/business\ writing.jpg");
+  background-image: url("/assets/images/business\ banner.jpg");
   background-color: rgba(0, 0, 0, 0.525);
   background-blend-mode: multiply;
   height: 500px;
   width: auto;
-  background-position: top;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -222,13 +222,21 @@ a:hover {
   margin-top: 23px;
   margin-bottom: 23px;
 }
-/* cards css */
 
 
-@media screen (min-width:425px)  {
+.detail-section .text-section{
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 20px;
+
+}
+
+@media (min-width:200px) and (max-width:700px){
   .detail-section .text-section{
-    margin-left: 0px;
-    margin-right: 0px;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+
   }
-  
+
 }
