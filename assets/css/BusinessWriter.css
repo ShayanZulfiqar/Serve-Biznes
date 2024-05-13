@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  h1, h4{
+      font-weight: 600;
+  }
+  
+  
+  .main-section .button-section .button1 {
+    background-color: #1e2330; color: white;
+    border: 3px solid rgb(209, 209, 209);
+    color: white;
+    font-weight: 700;
+  }
+  .main-section .button-section .button1:hover {
+    background-color: transparent;
+    border: 3px solid rgb(31, 31, 31);
+    color: rgb(31, 31, 31);
+    font-weight: 700;
+  }
+  
+  .main-section .button-section .button2 {
+    background-color: transparent;
+    border: 3px solid rgb(31, 31, 31);
+    font-weight: 700;
+  }
+  .main-section .button-section .button2:hover {
+    background-color: #1e2330; color: white;
+    border: 3px solid rgb(209, 209, 209);
+    color: whitesmoke;
+    font-weight: 700;
+  }
+  /* container services  */
+  .container-services .section-buttons button{
+      background-color: #1e2330; color: white;
+    border: 3px solid rgb(209, 209, 209);
+    color: white;
+    font-weight: 700;
+  
+  }
+  .container-services .section-buttons button:hover{
+      background-color: transparent;
+    border: 3px solid rgb(31, 31, 31);
+    color: rgb(31, 31, 31);
+    font-weight: 700;
+  
+  }
+  .container-collapses .row{
+    padding: 30px;
+  }
+  
+  
+  .container-wide-range .row i{
+      font-size: 40px;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .container-services-home  img {
+        width: 248px;
+        margin-top: 10px;
+    }
+    .container-cards-section{
+      padding-left: 20px ;
+      padding-right: 20px;
+    }
+    .container-collapses .row{
+      padding: 20px;
+    }
+    .container-wide-range .row .card img{
+        height: 100%;
+        width: 100%;
+    }
+  }

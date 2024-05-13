@@ -893,6 +893,12 @@ h1 {
   font-weight: 300;
   margin: 2em 0;
 }
+@media (min-width:320px) and (max-width:728px){
+  .container-faqs {
+    /* margin-bottom: 20px; */
+    width: 100%;
+  }
+}
 
 /* footer */
 
@@ -1046,13 +1052,18 @@ h1 {
 @media screen and (max-width: 650px) {
   .container-services img {
     width: 300px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
 }
 @media screen and (max-width: 650px) {
   .container-choice img {
     width: 300px;
     margin-bottom: 10px;
+  }
+}
+@media (min-width:320px) and (max-width:728px){
+  .wrapper-for-arrows{
+    width: 95%;
   }
 }
 /* .collapses */
