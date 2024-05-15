@@ -6,8 +6,9 @@
 }
 .main-banner {
     margin-top: 7px;
-    background-image: url("/assets/images/business3\ \(2\).jpg");
-    height: 480px ;
+    background-color: rgba(43, 42, 42, 0.308);
+    background-image: url("/assets/images/Trailor\ writing.jpg");
+    height: 490px ;
     width: auto;
     background-position: top;
     background-repeat: no-repeat;
@@ -17,17 +18,21 @@
 }
 
  .button-container{
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.main-banner .button-section .button-container  button{
-    background-color: #040273;
+.main-banner .button-container  button{
+    background-color: #1b18ab;
     border-radius: 25px;
-    border: 3px solid black;
+    border: 3px solid white;
+    color: white;
     width: 200px;
 }
-.main-banner .button-section .button-container  button:hover{
+.main-banner .button-container  button:hover{
     background-color: white;
-    border: 3px solid white;
+    border: 3px solid #040273;
     color: black !important;
     width: 200px;
 }
