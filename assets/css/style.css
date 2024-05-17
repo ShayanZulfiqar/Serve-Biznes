@@ -7,12 +7,15 @@
   box-sizing: border-box;
   font-family: "Poppins";
 }
+
 :root {
   --font-family: "Poppins";
 }
+
 a:hover {
   text-decoration: none !important;
 }
+
 h1,
 h2,
 h3,
@@ -22,6 +25,7 @@ h6 {
   font-weight: 600 !important;
   font-family: var(--font-family);
 }
+
 /* Dropdown Button */
 .dropbtn {
   background-color: transparent;
@@ -42,9 +46,10 @@ h6 {
   display: none;
   position: absolute;
   background-color: rgb(0, 0, 0);
-  min-width: 180px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 10px;
 }
 
 /* Links inside the dropdown */
@@ -56,20 +61,29 @@ h6 {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: white; color:#000
+
+.dropdown-content a:hover {
+  background-color: white;
+  color: #000;
+  border-radius: 10px;
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: none;}
+.dropdown:hover .dropbtn {
+  background-color: none;
+}
 
 .btn-dark:hover {
   background: transparent !important;
   border-color: black !important;
   color: black !important;
 }
+
 .btn-outline-dark {
   border-radius: 25px;
   /* font-weight: 400; */
@@ -95,6 +109,7 @@ button,
   color: black;
   transition: all 0.3s ease-in-out;
 }
+
 .link:hover {
   text-decoration: underline;
   color: #434343;
@@ -104,29 +119,36 @@ h1,
 h4 {
   font-weight: 600;
 }
+
 .navbar {
   background: #1e2330;
 }
+
 .navbar .navbar-nav {
   gap: 1.3rem;
 }
-@media (max-width: 1000px){
+
+@media (max-width: 1000px) {
   .navbar .navbar-nav {
     gap: 0rem;
   }
 }
-.toggle-btn{
+
+.toggle-btn {
   display: flex;
   align-items: center;
-  gap: 1rem ;
+  gap: 1rem;
 }
-.toggle-btn .login_icon{
+
+.toggle-btn .login_icon {
   font-size: 25px;
   /* margin-right: 10px; */
 }
-.navbar-toggler{
+
+.navbar-toggler {
   background: white !important;
 }
+
 .navbar-collapse ul li a {
   font-size: 16px;
   font-weight: 500;
@@ -134,6 +156,7 @@ h4 {
   position: relative;
   color: white;
 }
+
 .navbar-collapse ul li .nav-link::before {
   content: "";
   width: 20%;
@@ -147,42 +170,54 @@ h4 {
   opacity: 0;
   transition: all 0.4s ease;
 }
+
 .navbar-collapse ul li .nav-link:hover::before {
   width: 80%;
   opacity: 1;
   /* transform: scale(1); */
   /* transform-origin: left; */
 }
+
 .navbar-collapse ul li .nav-link:hover {
-  color: rgba(255, 255, 255, 0.813) !important;
+  color:  #4169E1 !important;
 }
 
+.dropdown a{
+  color: black;
+  
+}
 .navbar .navbar-text button {
   border-radius: 25px;
   font-weight: 700;
   border-color: transparent;
 }
+
 .navbar button:hover {
   background: transparent;
   border-color: white;
   font-weight: 700;
   color: white;
 }
+
 .navbar button:hover a {
   color: white;
 }
+
 .navbar button a {
   text-decoration: none;
 }
+
 .dropdown-menu {
   background: #2d55cf;
 }
+
 .dropdown-menu .sub-dropdown .dropdown-item {
   transition: all 0.3s ease-in;
   border-left: 5px solid transparent;
   margin-bottom: 15px;
   color: #ffffff;
 }
+
 .dropdown-menu .sub-dropdown .dropdown-item:hover {
   background-color: transparent;
   color: white;
@@ -209,6 +244,7 @@ h4 {
   opacity: 1;
   visibility: visible;
 }
+
 #services-dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -237,6 +273,7 @@ h4 {
 .dropdown-column:hover .pages {
   display: block;
 }
+
 .container-main .container-image {
   height: 500px;
   width: auto;
@@ -249,6 +286,7 @@ h4 {
   font-weight: 500;
   margin-right: 10px;
 }
+
 .container-services .section-buttons button:hover {
   background-color: #1e2330;
   color: white;
@@ -256,12 +294,14 @@ h4 {
   color: white;
   font-weight: 500;
 }
+
 .container-services .section-buttons a {
   color: black;
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
 }
+
 .container-services .section-buttons a:hover {
   color: rgb(80, 80, 235);
   text-decoration: none;
@@ -270,6 +310,7 @@ h4 {
 .container-process i {
   font-size: 35px;
 }
+
 .container-expert i {
   font-size: 35px;
   margin: 10px;
@@ -459,6 +500,7 @@ h1 {
   background-color: rgb(255, 255, 255);
   transform: rotate(5deg);
 }
+
 /* form */
 
 .side-bar {
@@ -804,31 +846,37 @@ h1 {
   background-color: #ffffff;
   color: #000;
 }
+
 /* container-get-started */
 .container-get-started .button1 {
   border-radius: 25px;
   background-color: transparent;
   color: black;
 }
+
 .container-get-started .button1:hover {
   /* border-radius: 100px; */
   background-color: #1e2330;
   color: white;
   color: white;
 }
+
 .container-get-started .button2 {
   border-radius: 25px;
 }
+
 .container-get-started .button2:hover {
   border-radius: 25px;
   background-color: #1e2330;
   color: white;
   color: white;
 }
+
 /* Faqs */
 .container-faqs {
   margin-bottom: 20px;
 }
+
 /* Accordion */
 .container {
   margin: 0 auto;
@@ -916,7 +964,7 @@ h1 {
   width: 0;
 }
 
-.accordion button[aria-expanded="true"] + .accordion-content {
+.accordion button[aria-expanded="true"]+.accordion-content {
   opacity: 1;
   max-height: 9em;
   transition: all 200ms linear;
@@ -936,7 +984,8 @@ h1 {
   font-weight: 300;
   margin: 2em 0;
 }
-@media (min-width:320px) and (max-width:728px){
+
+@media (min-width:320px) and (max-width:728px) {
   .container-faqs {
     /* margin-bottom: 20px; */
     width: 100%;
@@ -1076,12 +1125,14 @@ h1 {
     margin: 10px 0 0 0;
   }
 }
+
 @keyframes moveHead {
-  0% {
-  }
+  0% {}
+
   25% {
     transform: translate(0.5rem, 1rem) rotate(5deg);
   }
+
   100% {
     transform: translate(0, 0) rotate(-5deg);
   }
@@ -1092,70 +1143,81 @@ h1 {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 650px) {
   .container-services img {
     width: 300px;
     /* margin-top: 10px; */
   }
 }
+
 @media screen and (max-width: 650px) {
   .container-choice img {
     width: 300px;
     margin-bottom: 10px;
   }
 }
-@media (min-width:320px) and (max-width:728px){
-  .wrapper-for-arrows{
+
+@media (min-width:320px) and (max-width:728px) {
+  .wrapper-for-arrows {
     width: 95%;
   }
 }
+
 /* .collapses */
-.container button{
+.container button {
   background: transparent;
   color: black;
   border-radius: 2px solid black;
 }
-.container-services button{
+
+.container-services button {
   background: transparent;
   color: black;
   border-color: 2px solid blue;
   /* height: 90px; */
 }
-.container-services button:hover{
+
+.container-services button:hover {
   /* background: rgb(55, 55, 181); */
   /* color: white; */
-  border-color: 2px solid rgb(80, 80, 235) ;
+  border-color: 2px solid rgb(80, 80, 235);
 }
 
 
 
 /* services cards icons  */
 @media (max-width: 650px) {
-  .container-services button{
+  .container-services button {
     font-size: 10px;
-  } 
+  }
 }
 
 .service-single {
   overflow: hidden;
 }
+
 .service-single {
   position: relative;
   overflow: hidden;
   transition: all 0.3s;
   margin-bottom: 30px;
 }
+
 .service-item .service-single .service-img {
   height: 250px;
   overflow: hidden;
 }
+
 .service-item .service-single .service-img img {
   min-height: 250px;
   object-fit: cover;
 }
+
 .service-item .service-single .service-content.long-heading {
   padding-top: 18px;
 }
+
 .service-content {
   padding: 29px 40px 20px;
   position: absolute;
@@ -1168,6 +1230,7 @@ h1 {
   transition: all 0.3s;
   opacity: 0.8;
 }
+
 .service-single:hover .service-content {
   top: 0;
   display: flex;
@@ -1176,6 +1239,7 @@ h1 {
   width: 100%;
   height: 100%;
 }
+
 .service-single:before {
   content: "";
   position: absolute;
@@ -1193,6 +1257,7 @@ h1 {
   position: relative;
   color: #fff;
 }
+
 .service-item .service-single .service-content h3 i {
   position: absolute;
   left: -115px;
@@ -1201,6 +1266,7 @@ h1 {
   color: #34ccff;
   font-weight: 500;
 }
+
 .service-item .service-single .service-content.long-heading h3 i {
   top: -25px;
 }
@@ -1209,48 +1275,60 @@ h1 {
   content: "\f107";
   margin-top: 5px;
 }
+
 .service-content3 h3:before {
   content: "\f100";
   transform: rotate(45deg);
 }
+
 .service-content4 h3:before {
   content: "\f108";
 }
+
 .service-content5 h3:before {
   content: "\f10a";
 }
+
 .service-content6 h3:before {
   content: "\f10b";
 }
+
 .service-content p {
   padding: 2px 0 0;
   color: #fff;
   line-height: 30px;
 }
+
 .service-content a {
   color: #34ccff;
   text-decoration: none;
 }
+
 .service-content h3 a {
-  color: white ;
+  color: white;
   text-decoration: none;
 }
+
 .service-content h3 a:hover {
-  color: #34ccff ;
+  color: #34ccff;
   text-decoration: underline;
 }
+
 .service-content a:hover {
   color: #34ccff;
   text-decoration: underline;
 }
+
 .service-area.service-s2 .service-item .service-single {
   background: #fff;
   text-align: center;
   padding: 40px 33px;
 }
+
 .service-area.service-s2 .service-item .service-single:before {
   content: none;
 }
+
 .service-area.service-s2 .service-item .service-single .service-icon {
   background-color: rgba(52, 203, 255, 0.2);
   width: 90px;
@@ -1262,6 +1340,7 @@ h1 {
   margin: auto;
   margin-bottom: 25px;
 }
+
 .service-area.service-s2 .service-item .service-single .service-icon:before {
   content: "";
   background-color: rgba(52, 203, 255, 0.2);
@@ -1272,14 +1351,17 @@ h1 {
   top: -5px;
   border-radius: 50%;
 }
+
 .service-area.service-s2 .service-item .service-single .service-icon i {
   color: #142440;
 }
+
 .service-area.service-s2 .service-item .service-single h2 {
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: 600;
 }
+
 .service-area.service-s2 .service-item .service-single p {
   line-height: 30px;
   color: #5d5b5b;
