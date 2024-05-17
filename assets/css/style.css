@@ -179,12 +179,11 @@ h4 {
 }
 
 .navbar-collapse ul li .nav-link:hover {
-  color:  #4169E1 !important;
+  color: #4169e1 !important;
 }
 
-.dropdown a{
+.dropdown a {
   color: black;
-  
 }
 .navbar .navbar-text button {
   border-radius: 25px;
@@ -964,7 +963,7 @@ h1 {
   width: 0;
 }
 
-.accordion button[aria-expanded="true"]+.accordion-content {
+.accordion button[aria-expanded="true"] + .accordion-content {
   opacity: 1;
   max-height: 9em;
   transition: all 200ms linear;
@@ -985,7 +984,7 @@ h1 {
   margin: 2em 0;
 }
 
-@media (min-width:320px) and (max-width:728px) {
+@media (min-width: 320px) and (max-width: 728px) {
   .container-faqs {
     /* margin-bottom: 20px; */
     width: 100%;
@@ -1127,7 +1126,8 @@ h1 {
 }
 
 @keyframes moveHead {
-  0% {}
+  0% {
+  }
 
   25% {
     transform: translate(0.5rem, 1rem) rotate(5deg);
@@ -1158,7 +1158,7 @@ h1 {
   }
 }
 
-@media (min-width:320px) and (max-width:728px) {
+@media (min-width: 320px) and (max-width: 728px) {
   .wrapper-for-arrows {
     width: 95%;
   }
@@ -1183,8 +1183,6 @@ h1 {
   /* color: white; */
   border-color: 2px solid rgb(80, 80, 235);
 }
-
-
 
 /* services cards icons  */
 @media (max-width: 650px) {
@@ -1249,7 +1247,6 @@ h1 {
   height: 100%;
   background-color: rgba(20, 36, 64, 0.2);
 }
-
 
 .service-content h3 {
   font-size: 20px;
@@ -1365,4 +1362,19 @@ h1 {
 .service-area.service-s2 .service-item .service-single p {
   line-height: 30px;
   color: #5d5b5b;
+}
+
+/* inputs_index */
+.inputs_index input {
+  padding: 12px;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid rgb(39, 39, 137);
+  border-radius: 7px;
+}
+.inputs_index button{
+  padding: 12px;
+  border: 1px solid #142440;
+  border-radius: 12px;
+  width: 100px;
 }
