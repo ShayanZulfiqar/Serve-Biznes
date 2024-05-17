@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+h1, h2, h3, h4, h5{
+font-weight: 700;
+}
+.main-container{
+    background-image: url("/assets/images/HowItWorks.jpg");
+    background-color: rgba(0, 0, 0, 0.500);
+    background-blend-mode: multiply;
+    height: 450px;
+    width: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.text-container{
+    padding-top: 160px;
+    font-weight: 500;
+}
+
+.cards-section{
+    margin-top: -50px;
+}
+
+.card .card-body .card-image{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28px;
+}
+.container-hired{
+    background: #4169E1
+    ;
+}
+
+.container-hired .col-lg-8 button{
+    background-color: white;
+    border: 2px solid white;
+    border-color: white;
+    font-weight: 700;
+}
+.container-hired .col-lg-8 button:hover{
+    background-color: transparent;
+    border: 2px solid white;
+    border-color: white;
+    color: white;
+}
+
+@media (min-width:320px) and (max-width:728px){
+    .container-hired{
+        padding-top: 20px;
+    }
+    .container-hired .col-lg-4 img{
+        height: 150px;
+        width: auto;
+    }
+}
