@@ -7,6 +7,9 @@
   box-sizing: border-box;
   font-family: "Poppins";
 }
+p{
+  font-size: 14px !important;
+}
 
 :root {
   --font-family: "Poppins";
@@ -16,12 +19,17 @@ a:hover {
   text-decoration: none !important;
 }
 
-h1,
+
 h2,
 h3,
 h4,
 h5,
 h6 {
+  font-weight: 600 !important;
+  font-family: var(--font-family);
+}
+h1{
+  font-size: 32px !important;
   font-weight: 600 !important;
   font-family: var(--font-family);
 }
@@ -76,12 +84,14 @@ h6 {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   background-color: none;
+  color: #4169e1 !important;
+  /* font-weight: normal; */
 }
 
 .btn-dark:hover {
   background: transparent !important;
-  border-color: black !important;
-  color: black !important;
+  /* border-color: black !important; */
+  color: #4169e1 !important;
 }
 
 .btn-outline-dark {
@@ -334,7 +344,7 @@ select {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 }
 
 h1 {
@@ -1378,3 +1388,5 @@ h1 {
   border-radius: 12px;
   width: 100px;
 }
+
+

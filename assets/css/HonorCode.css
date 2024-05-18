@@ -13,6 +13,9 @@ h5 {
     font-weight: 600;
 
 }
+p{
+    font-size: 14px !important;
+  }
 
 /* check boxes */
 .text {

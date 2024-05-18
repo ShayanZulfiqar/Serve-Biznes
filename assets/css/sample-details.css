@@ -8,6 +8,9 @@ h1,
 h4 {
   font-weight: 600;
 }
+p{
+  font-size: 14px !important;
+}
 .sample-section:hover {
   background-image: url("/assets/images/sample-page.jpg");
   background-position: center center;

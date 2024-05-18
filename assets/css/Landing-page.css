@@ -4,6 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+p{
+    font-size: 14px !important;
+  }
 .main-banner {
     margin-top: 7px;
     background-color: rgba(43, 42, 42, 0.308);

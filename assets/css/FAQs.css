@@ -8,6 +8,9 @@
     /* padding: 4rem; */
     width: 70%;
   }
+  p{
+    font-size: 14px !important;
+  }
   
   .accordion .accordion-item {
     border-bottom: 1px solid lightgray;

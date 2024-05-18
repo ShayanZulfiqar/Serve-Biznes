@@ -1,3 +1,7 @@
+p{
+  font-size: 14px !important;
+}
+
 .content-section:hover {
   background-image: url("/assets/images/free\ resource.jpg");
   background-position: center center;
