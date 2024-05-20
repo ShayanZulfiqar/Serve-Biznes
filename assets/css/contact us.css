@@ -12,6 +12,12 @@ p{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("/assets/images/academic10.jpg ");
+  background-color: rgba(0, 0, 0, 0.525);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .background-image {
